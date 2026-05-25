@@ -15,8 +15,19 @@ TLI/
     2024/
     2025/
     2026/
+  concepts/
+    backend/
+    database/
+    spring/
+    infra/
+    algorithm/
+    git/
 ```
 
 ## Daily Logs
 
 날짜별 학습 기록은 `daily/YYYY/` 아래에 저장합니다.
+
+## Concepts
+
+개념별 정리 문서는 `concepts/` 아래에 주제별로 저장합니다.
