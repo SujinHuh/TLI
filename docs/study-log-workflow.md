@@ -85,14 +85,14 @@ Daily 문서에는 관련 concepts를 남긴다.
 
 ```md
 ## 🔗 관련 Concepts
-- `concepts/infra/api-gateway.md`
+- [API Gateway](../../concepts/infra/api-gateway.md)
 ```
 
 Concepts 문서에는 관련 daily를 남긴다.
 
 ```md
 ## 관련 Daily
-- `daily/2026/2026-05-25(월) API Gateway 흐름 정리.md`
+- [2026-05-25(월) API Gateway 흐름 정리](../../daily/2026/2026-05-25(월)%20API%20Gateway%20흐름%20정리.md)
 ```
 
 ## 공부 시간 기록 기준

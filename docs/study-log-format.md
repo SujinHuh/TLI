@@ -65,7 +65,7 @@ HH:mm ~ HH:mm (총 N시간 N분)
 사용자가 직접 작성한다.
 
 ## 🔗 관련 Concepts
-- `concepts/주제/개념명.md`
+- [개념명](../../concepts/주제/개념명.md)
 ```
 
 ## 작성 예시
@@ -89,7 +89,7 @@ HH:mm ~ HH:mm (총 N시간 N분)
 이게 제대로 딥다이브가 맞는지는 아직 모르겠지만, 그래도 조금씩 흥미를 찾는 것 같다.
 
 ## 🔗 관련 Concepts
-- `concepts/infra/api-gateway.md`
+- [API Gateway](../../concepts/infra/api-gateway.md)
 ```
 
 ## Concepts 포맷
@@ -114,5 +114,5 @@ HH:mm ~ HH:mm (총 N시간 N분)
 - 실무에서 조심할 점
 
 ## 관련 Daily
-- `daily/YYYY/YYYY-MM-DD(요일) 소제목.md`
+- [YYYY-MM-DD(요일) 소제목](../../daily/YYYY/YYYY-MM-DD(요일)%20소제목.md)
 ```
