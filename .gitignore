@@ -1,4 +1,7 @@
 AGENTS.md
 companyQ&A.md
-interviews/company/
+interviews/company/*
+!interviews/company/텔코웨어/
+interviews/company/텔코웨어/*
+!interviews/company/텔코웨어/*.md
 temp/
