@@ -1,0 +1,3046 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2. 텔코웨어 1차 필기 문제은행</title>
+  <style>:root{color-scheme:light;--fg:#202124;--muted:#5f6368;--line:#dadce0;--bg:#f8fafd;--paper:#fff;--accent:#1a73e8;--soft:#eef4ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",Arial,sans-serif;line-height:1.72;color:var(--fg);background:var(--bg)}.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 56px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px;color:var(--muted);font-size:.92rem}.badge{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:#fff;white-space:nowrap}.paper{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:30px 38px 44px;box-shadow:0 12px 32px rgba(60,64,67,.08)}.site-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line)}.site-nav a,.page-foot a{border:1px solid var(--line);border-radius:999px;padding:7px 12px;text-decoration:none;color:#174ea6;background:#fff;font-weight:700;font-size:.94rem}.site-nav a:hover,.page-foot a:hover{background:var(--soft)}.site-nav a.active{background:#174ea6;color:#fff;border-color:#174ea6}.home-link{color:#202124!important}.page-head h1{margin:0 0 10px;font-size:2.08rem;line-height:1.25;border-bottom:3px solid var(--accent);padding-bottom:16px}.page-head p{margin:0 0 24px;color:var(--muted)}.toc{border:1px solid #e8eaed;background:#fbfcff;border-radius:8px;padding:14px 16px;margin:0 0 26px}.toc strong{display:block;margin-bottom:8px;color:#3c4043}.toc a{display:inline-flex;margin:4px 10px 4px 0;color:#174ea6;text-decoration:none;border-bottom:1px solid rgba(26,115,232,.25)}.toc a:hover{border-bottom-color:#174ea6}.toc-3{font-size:.92rem;color:#3c4043!important}.content h1{margin:34px 0 24px;font-size:1.7rem;line-height:1.3}.content h2{margin:42px 0 16px;font-size:1.32rem;line-height:1.35;border-top:1px solid var(--line);padding-top:28px;color:#174ea6}.content h3{margin:24px 0 10px;font-size:1.08rem;color:#3c4043}p{margin:10px 0 14px}ol,ul{margin:8px 0 18px 24px;padding:0}li{margin:5px 0}code{font-family:SFMono-Regular,Consolas,"Liberation Mono",monospace;background:#f1f3f4;border:1px solid #e8eaed;padding:1px 5px;border-radius:4px;font-size:.94em}pre{overflow:auto;background:#202124;color:#f8fafd;padding:16px;border-radius:8px;line-height:1.6}pre code{background:transparent;border:0;padding:0;color:inherit}.table-wrap{overflow:auto;margin:14px 0 20px}table{width:100%;border-collapse:collapse;font-size:.96rem}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:#eef4ff;color:#174ea6}.page-foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}.home-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 28px}.home-card{display:block;text-decoration:none;color:var(--fg);border:1px solid var(--line);border-radius:8px;background:#fff;padding:18px;min-height:150px}.home-card:hover{border-color:#aecbfa;background:#fbfcff}.home-card strong{display:block;color:#174ea6;font-size:1.12rem;margin-bottom:8px}.home-card span{color:var(--muted);font-size:.95rem}.summary-band{border:1px solid #e8eaed;background:#fbfcff;border-radius:8px;padding:16px 18px;margin:18px 0 26px}@media(max-width:760px){.wrap{padding:12px}.top{align-items:flex-start;flex-direction:column}.paper{padding:22px 16px}.page-head h1{font-size:1.55rem}.content h1{font-size:1.35rem}.content h2{font-size:1.16rem}.site-nav a{flex:1 1 auto;text-align:center}.home-grid{grid-template-columns:1fr}}
+.qa-card{border:1px solid var(--line);border-radius:8px;background:#fff;margin:10px 0 12px;overflow:hidden}
+.qa-card summary{cursor:pointer;display:flex;gap:10px;align-items:flex-start;padding:14px 16px;font-weight:800;color:#202124;line-height:1.55}
+.qa-card summary::marker{color:#174ea6}
+.qa-card[open]{border-color:#aecbfa;box-shadow:0 8px 20px rgba(60,64,67,.08)}
+.qa-body{border-top:1px solid #e8eaed;background:#fbfcff;padding:14px 16px 16px}
+.qa-body h4{margin:12px 0 6px;color:#174ea6;font-size:1rem}
+.qa-body h4:first-child{margin-top:0}
+.qa-body p{margin:6px 0 12px}
+.qa-body ul{margin:6px 0 14px 22px}
+.qa-number{color:#174ea6;min-width:2.4em}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><span>텔코웨어 면접 공부</span><span class="badge">질문별 개념/답변 토글</span></div>
+    <article class="paper">
+      <nav class="site-nav"><a href="0-home.html" class="">0. Home</a><a href="1-priority-checklist.html" class="">1. 우선순위</a><a href="2-written-test-expected-questions.html" class="active">2. 문제은행</a><a href="3-resume-based-questions.html" class="">3. 업무기반</a></nav>
+      <header class="page-head">
+        <h1>2. 텔코웨어 1차 필기 문제은행</h1>
+        <p>각 질문을 열면 개념과 답변을 함께 볼 수 있습니다.</p>
+      </header>
+      <aside class="toc"><strong>목차</strong><a class="toc-2" href="#준비-방향">준비 방향</a><a class="toc-2" href="#1-java-기본-문법과-객체지향">1. Java 기본 문법과 객체지향</a><a class="toc-2" href="#2-java-collection과-자료구조">2. Java Collection과 자료구조</a><a class="toc-2" href="#3-java-동시성">3. Java 동시성</a><a class="toc-2" href="#4-jvm과-성능">4. JVM과 성능</a><a class="toc-2" href="#5-spring-boot와-spring-framework">5. Spring Boot와 Spring Framework</a><a class="toc-2" href="#6-rest-api와-web-backend">6. REST API와 Web Backend</a><a class="toc-2" href="#7-rdb-sql-트랜잭션">7. RDB, SQL, 트랜잭션</a><a class="toc-2" href="#8-linux와-운영체제">8. Linux와 운영체제</a><a class="toc-2" href="#9-네트워크와-tcp-ip">9. 네트워크와 TCP/IP</a><a class="toc-2" href="#10-알고리즘과-코딩-테스트형-문제">10. 알고리즘과 코딩 테스트형 문제</a><a class="toc-2" href="#11-설계와-아키텍처">11. 설계와 아키텍처</a><a class="toc-2" href="#12-tomcat-gradle-배포">12. Tomcat, Gradle, 배포</a><a class="toc-2" href="#13-보안">13. 보안</a><a class="toc-2" href="#14-통신-도메인-기초">14. 통신 도메인 기초</a><a class="toc-2" href="#15-실무형-서술-문제">15. 실무형 서술 문제</a><a class="toc-2" href="#16-객관식으로-나올-수-있는-빠른-확인-문제">16. 객관식으로 나올 수 있는 빠른 확인 문제</a><a class="toc-2" href="#우선순위-높은-복습-키워드">우선순위 높은 복습 키워드</a></aside>
+      <section class="content">
+<h1 id="텔코웨어-1차-필기시험-예상문제">텔코웨어 1차 필기시험 예상문제</h1>
+<h2 id="준비-방향">준비 방향</h2>
+<p>텔코웨어의 Web Application back-end 개발 직무는 Java, Spring Boot, RDB, Gradle/Tomcat, MSA, RESTful 경험을 요구한다. 회사 도메인은 통신 Core Network, IMS, 5G/LTE Core, Cloud/VNF/CNF 쪽이므로 일반 백엔드 필기보다 네트워크, Linux, DB, 동시성, 고가용성 문제 비중이 높을 가능성이 있다.</p>
+<p>아래 문제는 실제 기출이 아니라, 회사 정보와 채용 키워드에 맞춰 뽑은 예상 문제다.</p>
+<h2 id="1-java-기본-문법과-객체지향">1. Java 기본 문법과 객체지향</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Java에서 <code>==</code>와 <code>equals()</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>동등성 비교는 Java 필기에서 매우 자주 나오는 기본 문제다. <code>==</code>는 primitive에서는 값 비교, reference type에서는 참조 주소 비교다. <code>equals()</code>는 객체가 의미상 같은지를 비교하도록 재정의할 수 있는 메서드다.</p>
+<h4>답변</h4>
+<p><code>String</code>처럼 <code>equals()</code>가 재정의된 클래스는 내용이 같으면 true가 될 수 있지만, 직접 만든 객체는 재정의하지 않으면 Object의 기본 동작처럼 주소 비교가 된다. 실무에서는 ID, 값 객체, Map key 비교에서 동등성 기준을 명확히 잡아야 한다. <code>equals()</code>를 재정의할 때는 반사성, 대칭성, 추이성, 일관성, null 비교 규칙도 지켜야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span><code>hashCode()</code>와 <code>equals()</code>를 함께 재정의해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>hashCode()</code>는 해시 기반 컬렉션이 객체를 빠르게 찾기 위해 사용하는 정수 해시값이다. <code>equals()</code>가 true인 두 객체는 반드시 같은 hashCode를 가져야 한다는 규약이 있다.</p>
+<h4>답변</h4>
+<p><code>HashMap</code>, <code>HashSet</code>은 먼저 hashCode로 버킷을 찾고, 같은 버킷 안에서 equals로 실제 동등성을 확인한다. equals만 재정의하고 hashCode를 재정의하지 않으면 같은 값으로 봐야 할 객체가 다른 버킷에 들어가 조회나 중복 제거가 깨질 수 있다. 그래서 값 객체를 Map key로 쓸 가능성이 있으면 두 메서드를 항상 함께 재정의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span><code>String</code>, <code>StringBuilder</code>, <code>StringBuffer</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>String</code>은 불변 객체이고, 문자열을 바꿀 때마다 새 객체가 만들어질 수 있다. <code>StringBuilder</code>와 <code>StringBuffer</code>는 내부 버퍼를 사용해 문자열을 누적 변경한다.</p>
+<h4>답변</h4>
+<p>단일 스레드에서 문자열을 반복 조합할 때는 <code>StringBuilder</code>가 적합하다. <code>StringBuffer</code>는 주요 메서드가 동기화되어 thread-safe하지만 그만큼 비용이 있어 일반적인 로컬 문자열 조합에는 과하다. 반복문에서 <code>String += value</code>를 많이 쓰면 객체 생성과 GC 부담이 커질 수 있으므로 Builder 계열을 고려한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>Java의 primitive type과 wrapper type의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>primitive type은 값 자체를 다루고 null을 가질 수 없다. wrapper type은 primitive를 객체로 감싼 타입이라 null, 제네릭, 컬렉션 사용이 가능하다.</p>
+<h4>답변</h4>
+<p>오토박싱/언박싱은 편하지만 반복 계산, 대량 데이터 처리, Map 연산에서 불필요한 객체 생성이나 NPE를 만들 수 있다. 예를 들어 <code>Integer count = null; count++</code>는 언박싱 과정에서 NullPointerException이 발생한다. 성능이 중요한 루프나 대량 집계에서는 primitive 사용 가능 여부를 먼저 검토한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>오토박싱/언박싱이 성능 문제를 만들 수 있는 상황을 예로 드시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>primitive type은 값 자체를 다루고 null을 가질 수 없다. wrapper type은 primitive를 객체로 감싼 타입이라 null, 제네릭, 컬렉션 사용이 가능하다.</p>
+<h4>답변</h4>
+<p>오토박싱/언박싱은 편하지만 반복 계산, 대량 데이터 처리, Map 연산에서 불필요한 객체 생성이나 NPE를 만들 수 있다. 예를 들어 <code>Integer count = null; count++</code>는 언박싱 과정에서 NullPointerException이 발생한다. 성능이 중요한 루프나 대량 집계에서는 primitive 사용 가능 여부를 먼저 검토한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span><code>final</code> 키워드를 변수, 메서드, 클래스에 붙였을 때 각각의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>final</code>은 재할당, 재정의, 상속을 막아 의도를 명확하게 하는 키워드다. 변수에 붙으면 한 번만 할당할 수 있고, 메서드에 붙으면 override가 불가능하며, 클래스에 붙으면 상속이 불가능하다.</p>
+<h4>답변</h4>
+<p>참조 변수에 <code>final</code>을 붙여도 객체 내부 상태까지 불변이 되는 것은 아니다. 불변 객체를 만들려면 필드를 private final로 두고, setter를 제거하고, 가변 객체를 방어적 복사해야 한다. 실무에서는 값 객체, 설정 객체, 의존성 필드에 final을 사용해 코드 안정성을 높인다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>추상 클래스와 인터페이스의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>추상 클래스는 공통 상태와 구현을 일부 공유할 수 있는 상속 기반 설계 도구다. 인터페이스는 구현체가 지켜야 할 행위 계약을 정의하는 데 초점이 있다.</p>
+<h4>답변</h4>
+<p>Java 8 이후 인터페이스에 default method가 생겨 기존 구현체를 깨지 않고 메서드를 추가할 수 있다. 다만 상태를 갖는 공통 구현이 많거나 생성자 제어가 필요하면 추상 클래스가 더 적합하다. 백엔드에서는 결제수단, 알림 채널, 파일 저장소처럼 구현체를 갈아끼울 수 있는 영역에 인터페이스를 많이 둔다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>Java 8 이후 인터페이스의 <code>default method</code>가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>추상 클래스는 공통 상태와 구현을 일부 공유할 수 있는 상속 기반 설계 도구다. 인터페이스는 구현체가 지켜야 할 행위 계약을 정의하는 데 초점이 있다.</p>
+<h4>답변</h4>
+<p>Java 8 이후 인터페이스에 default method가 생겨 기존 구현체를 깨지 않고 메서드를 추가할 수 있다. 다만 상태를 갖는 공통 구현이 많거나 생성자 제어가 필요하면 추상 클래스가 더 적합하다. 백엔드에서는 결제수단, 알림 채널, 파일 저장소처럼 구현체를 갈아끼울 수 있는 영역에 인터페이스를 많이 둔다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>오버로딩과 오버라이딩의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>다형성이 실제 백엔드 코드에서 어떤 장점을 주는지 예시를 드시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>접근 제어자 <code>private</code>, <code>default</code>, <code>protected</code>, <code>public</code>의 범위를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>접근 제어자는 클래스, 필드, 메서드, 생성자에 접근할 수 있는 범위를 제한하는 Java 문법이다. <code>private</code>은 같은 클래스 내부, <code>default</code>는 같은 패키지, <code>protected</code>는 같은 패키지와 상속 관계의 하위 클래스, <code>public</code>은 어디서든 접근 가능하다.</p>
+<h4>답변</h4>
+<p>캡슐화를 지키려면 필드는 보통 <code>private</code>으로 숨기고 필요한 동작만 메서드로 공개한다. <code>public</code>을 남발하면 내부 구현이 외부 코드와 강하게 결합되어 변경이 어려워진다. 같은 패키지에서만 협력하는 구현 클래스는 <code>default</code>, 상속 확장 지점은 신중하게 <code>protected</code>를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>불변 객체가 필요한 이유와 만드는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>불변 객체는 생성 후 내부 상태가 바뀌지 않는 객체다. 상태 변경이 없기 때문에 동시성 환경에서 안전하고, 값 객체로 사용할 때 예측 가능성이 높다.</p>
+<h4>답변</h4>
+<p>불변 객체를 만들려면 클래스를 상속 불가능하게 하거나 변경 지점을 막고, 필드를 <code>private final</code>로 선언하며, setter를 제공하지 않는다. 생성자에서 모든 값을 초기화하고, 내부에 <code>List</code>, <code>Date</code> 같은 가변 객체가 있으면 방어적 복사와 불변 뷰를 사용해야 한다. 예를 들어 금액, 기간, 좌표, 요청 조건 같은 값은 불변 객체로 만들면 Map key 사용과 멀티스레드 공유가 안전해진다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span><code>record</code> 타입의 장점과 한계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>record</code>는 데이터를 담는 불변 지향 클래스 작성을 간결하게 해주는 Java 타입이다. 생성자, 접근자, <code>equals</code>, <code>hashCode</code>, <code>toString</code>을 컴파일러가 자동 생성한다.</p>
+<h4>답변</h4>
+<p><code>record</code>는 DTO, 조회 결과, 설정 값처럼 값 전달이 중심인 타입에 적합하다. 다만 암묵적으로 <code>final</code>이라 상속할 수 없고, 필드도 final이라 엔티티처럼 상태 변화와 지연 로딩이 필요한 모델에는 맞지 않을 수 있다. 내부 필드가 가변 객체라면 record 자체가 final이어도 완전한 불변은 아니므로 방어적 복사가 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span><code>enum</code>을 단순 문자열 상수 대신 사용할 때의 장점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>enum</code>은 정해진 값의 집합을 타입으로 표현하는 Java 문법이다. 문자열 상수보다 오타와 잘못된 값 입력을 컴파일 시점에 줄일 수 있다.</p>
+<h4>답변</h4>
+<p>문자열로 상태를 표현하면 <code>"READY"</code>, <code>"ready"</code>처럼 오타나 대소문자 차이가 런타임 오류로 이어진다. <code>enum</code>을 쓰면 가능한 값이 제한되고 switch, 비교, 메서드 추가가 명확해진다. 주문 상태, 배치 상태, 통신 이벤트 타입처럼 도메인 값이 제한된 경우 enum이 적합하지만, DB나 외부 API와 연동할 때는 저장 값 변경이 호환성 문제를 만들 수 있어 매핑 규칙을 고정해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>Checked Exception과 Unchecked Exception의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Checked Exception은 컴파일러가 처리 여부를 강제하는 예외이고, Unchecked Exception은 <code>RuntimeException</code> 계열로 컴파일러가 처리를 강제하지 않는 예외다.</p>
+<h4>답변</h4>
+<p>Checked Exception은 파일, 네트워크, 외부 자원처럼 호출자가 복구나 대체 처리를 고려해야 하는 상황에 어울린다. Unchecked Exception은 잘못된 인자, 상태 오류, 비즈니스 규칙 위반처럼 코드 흐름에서 발생하는 오류에 많이 쓴다. 실무에서는 예외를 무조건 삼키지 말고 원인, 요청 식별자, 입력 조건을 로그로 남기며 계층 경계에서 의미 있는 예외로 변환해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>예외를 무조건 <code>RuntimeException</code>으로 감싸는 방식의 장단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Checked Exception을 <code>RuntimeException</code>으로 감싸면 메서드 시그니처가 단순해지지만, 호출자가 반드시 처리해야 하는 실패 가능성이 숨겨질 수 있다.</p>
+<h4>답변</h4>
+<p>장점은 서비스 계층 코드가 불필요한 throws 선언으로 오염되지 않고 트랜잭션 rollback 정책과 맞추기 쉽다는 점이다. 단점은 외부 API 실패, 파일 처리 실패처럼 복구 가능한 오류도 무시되기 쉬워 장애 원인 파악이 어려워질 수 있다는 점이다. 감쌀 때는 원본 예외를 cause로 유지하고, 예외 타입을 업무 의미에 맞게 나누며, 재시도 가능 여부를 구분해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>try-with-resources가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>try-with-resources</code>는 <code>AutoCloseable</code> 자원을 try 블록이 끝날 때 자동으로 닫아주는 문법이다. 파일, 스트림, DB 커넥션처럼 반드시 반환해야 하는 자원에 사용한다.</p>
+<h4>답변</h4>
+<p>직접 <code>finally</code>에서 close를 호출하면 누락되거나 close 중 예외가 발생해 원래 예외를 가릴 수 있다. try-with-resources는 자원 해제를 자동화하고 suppressed exception으로 부가 예외도 보존한다. 운영 서버에서는 파일 핸들, socket, connection 누수가 장애로 이어질 수 있으므로 외부 자원은 이 문법이나 프레임워크의 자원 관리 범위 안에서 닫아야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>Java에서 <code>Object</code> 클래스의 주요 메서드를 나열하고 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>Object</code>는 모든 Java 클래스의 최상위 부모이며 공통 메서드를 제공한다. 대표적으로 <code>equals</code>, <code>hashCode</code>, <code>toString</code>, <code>getClass</code>, <code>clone</code>, <code>wait</code>, <code>notify</code>, <code>notifyAll</code>이 있다.</p>
+<h4>답변</h4>
+<p><code>equals</code>와 <code>hashCode</code>는 객체 동등성과 해시 컬렉션 동작에 직접 영향을 준다. <code>toString</code>은 로그와 디버깅 가독성에 중요하다. <code>wait/notify</code>는 monitor 기반 스레드 협력 메서드이지만 현대 코드에서는 <code>java.util.concurrent</code>의 고수준 API를 우선 고려하는 편이 안전하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>static 변수와 instance 변수의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>static</code> 변수는 클래스에 하나만 속하고 모든 인스턴스가 공유한다. instance 변수는 객체마다 별도로 존재한다.</p>
+<h4>답변</h4>
+<p><code>static</code> 변수는 전역 공유 상태가 되기 쉬워 멀티스레드 환경에서 동기화와 변경 범위를 조심해야 한다. 상수처럼 변하지 않는 값은 <code>static final</code>로 두기 적합하지만, 요청별 상태나 사용자별 값은 instance 변수나 지역 변수로 둬야 한다. Spring singleton bean에서도 필드에 요청 상태를 저장하면 동시 요청 간 데이터가 섞일 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>static method에서 instance field에 직접 접근할 수 없는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>static</code> 메서드는 특정 객체가 아니라 클래스에 속한 메서드다. 반면 instance field는 객체가 생성되어야 존재하므로 객체 없이 직접 접근할 수 없다.</p>
+<h4>답변</h4>
+<p><code>static</code> 메서드에서 instance field를 사용하려면 먼저 객체 참조가 필요하다. 이 차이는 메모리 소속의 차이로 이해하면 된다. 유틸성 함수는 static으로 둘 수 있지만, 객체 상태나 의존성에 따라 동작하는 로직은 인스턴스 메서드로 두는 것이 테스트와 확장에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>객체지향의 4대 특성인 캡슐화, 상속, 추상화, 다형성을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>캡슐화가 유지보수성과 안정성에 어떤 도움을 주는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">23.</span><span>상속보다 조합을 선호하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">24.</span><span>Java Generic이 필요한 이유와 장점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Generic은 컴파일 시점에 타입 안정성을 높이고 불필요한 형변환을 줄이는 기능이다. Java의 제네릭은 런타임에 타입 정보가 대부분 지워지는 type erasure 방식으로 구현된다.</p>
+<h4>답변</h4>
+<p><code>List&lt;String&gt;</code>과 <code>List&lt;Integer&gt;</code>는 컴파일 후 런타임에는 주로 <code>List</code>로 취급된다. 이 때문에 <code>new T()</code> 같은 코드는 직접 사용할 수 없고, 런타임 타입 검사가 제한된다. 그래도 컴파일 단계에서 잘못된 타입 삽입을 막아 컬렉션과 공통 API 설계에 매우 중요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">25.</span><span>type erasure가 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Generic은 컴파일 시점에 타입 안정성을 높이고 불필요한 형변환을 줄이는 기능이다. Java의 제네릭은 런타임에 타입 정보가 대부분 지워지는 type erasure 방식으로 구현된다.</p>
+<h4>답변</h4>
+<p><code>List&lt;String&gt;</code>과 <code>List&lt;Integer&gt;</code>는 컴파일 후 런타임에는 주로 <code>List</code>로 취급된다. 이 때문에 <code>new T()</code> 같은 코드는 직접 사용할 수 없고, 런타임 타입 검사가 제한된다. 그래도 컴파일 단계에서 잘못된 타입 삽입을 막아 컬렉션과 공통 API 설계에 매우 중요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">26.</span><span>SOLID 원칙 중 OCP와 DIP를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체지향의 핵심은 변경될 가능성이 높은 부분을 잘 숨기고, 역할과 구현을 분리하는 것이다. 캡슐화는 내부 상태를 보호하고, 추상화는 필요한 특징만 드러내며, 다형성은 같은 메시지를 구현체별로 다르게 처리하게 한다.</p>
+<h4>답변</h4>
+<p>오버로딩은 같은 이름의 메서드를 매개변수 차이로 여러 개 두는 것이고, 오버라이딩은 부모 타입의 메서드를 자식 타입에서 재정의하는 것이다. 상속은 강한 결합을 만들 수 있어 공통 기능 재사용만 목적으로 쓰면 변경에 취약해진다. 그래서 실무에서는 인터페이스와 조합을 사용해 OCP, DIP를 지키는 방향이 유지보수에 유리하다.</p>
+</div>
+</details>
+<h2 id="2-java-collection과-자료구조">2. Java Collection과 자료구조</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span><code>ArrayList</code>와 <code>LinkedList</code>의 내부 구조와 시간 복잡도를 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>ArrayList는 내부 배열 기반이고 LinkedList는 노드가 앞뒤 참조를 갖는 연결 리스트 기반이다. 구조 차이 때문에 조회와 삽입/삭제 비용이 달라진다.</p>
+<h4>답변</h4>
+<p>ArrayList는 인덱스 조회가 O(1)이고 순차 접근과 CPU cache locality가 좋아 일반적인 목록 처리에 유리하다. 중간 삽입/삭제는 뒤 요소를 밀거나 당겨야 해서 O(n)이다. LinkedList는 특정 노드를 이미 알고 있으면 삽입/삭제가 O(1)이지만, 그 노드를 찾는 탐색이 O(n)이고 노드 객체와 포인터 비용이 크다. 대부분의 백엔드 코드에서는 ArrayList가 기본 선택이다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span><code>HashMap</code>의 기본 동작 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HashMap</code>은 key의 hashCode로 버킷 위치를 계산하고, 같은 버킷 안에서 equals로 최종 key를 찾는 자료구조다. 평균적으로 조회, 삽입, 삭제가 O(1)에 가깝지만 해시 충돌이 많으면 성능이 나빠진다.</p>
+<h4>답변</h4>
+<p>Java 8 이후에는 한 버킷에 충돌 노드가 많아지면 linked list가 tree 구조로 바뀌어 최악 성능을 완화한다. key는 hashCode와 equals가 안정적이어야 하며, key로 쓰는 객체의 필드가 변경되면 조회가 깨질 수 있다. 멀티스레드 환경에서는 일반 HashMap을 공유 쓰기하면 안전하지 않으므로 ConcurrentHashMap 같은 구조를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span><code>HashMap</code>에서 hash collision이 발생하면 어떻게 처리되는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HashMap</code>은 key의 hashCode로 버킷 위치를 계산하고, 같은 버킷 안에서 equals로 최종 key를 찾는 자료구조다. 평균적으로 조회, 삽입, 삭제가 O(1)에 가깝지만 해시 충돌이 많으면 성능이 나빠진다.</p>
+<h4>답변</h4>
+<p>Java 8 이후에는 한 버킷에 충돌 노드가 많아지면 linked list가 tree 구조로 바뀌어 최악 성능을 완화한다. key는 hashCode와 equals가 안정적이어야 하며, key로 쓰는 객체의 필드가 변경되면 조회가 깨질 수 있다. 멀티스레드 환경에서는 일반 HashMap을 공유 쓰기하면 안전하지 않으므로 ConcurrentHashMap 같은 구조를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span><code>HashMap</code>과 <code>ConcurrentHashMap</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HashMap</code>은 key의 hashCode로 버킷 위치를 계산하고, 같은 버킷 안에서 equals로 최종 key를 찾는 자료구조다. 평균적으로 조회, 삽입, 삭제가 O(1)에 가깝지만 해시 충돌이 많으면 성능이 나빠진다.</p>
+<h4>답변</h4>
+<p>Java 8 이후에는 한 버킷에 충돌 노드가 많아지면 linked list가 tree 구조로 바뀌어 최악 성능을 완화한다. key는 hashCode와 equals가 안정적이어야 하며, key로 쓰는 객체의 필드가 변경되면 조회가 깨질 수 있다. 멀티스레드 환경에서는 일반 HashMap을 공유 쓰기하면 안전하지 않으므로 ConcurrentHashMap 같은 구조를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span><code>HashSet</code>이 중복을 제거하는 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>HashSet은 내부적으로 HashMap 구조를 사용해 원소의 중복 여부를 판단한다. 핵심은 <code>hashCode()</code>로 버킷을 찾고, 같은 버킷 안에서 <code>equals()</code>로 실제 동등성을 확인하는 것이다.</p>
+<h4>답변</h4>
+<p>두 객체의 <code>equals()</code>가 true라면 반드시 같은 <code>hashCode()</code>를 가져야 한다. 이 규약이 깨지면 같은 값으로 봐야 할 객체가 HashSet에 중복 저장될 수 있다. 그래서 값 객체를 Set에 넣거나 Map key로 사용할 때는 <code>equals</code>와 <code>hashCode</code>를 함께 재정의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span><code>TreeMap</code>과 <code>HashMap</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HashMap</code>은 key의 hashCode로 버킷 위치를 계산하고, 같은 버킷 안에서 equals로 최종 key를 찾는 자료구조다. 평균적으로 조회, 삽입, 삭제가 O(1)에 가깝지만 해시 충돌이 많으면 성능이 나빠진다.</p>
+<h4>답변</h4>
+<p>Java 8 이후에는 한 버킷에 충돌 노드가 많아지면 linked list가 tree 구조로 바뀌어 최악 성능을 완화한다. key는 hashCode와 equals가 안정적이어야 하며, key로 쓰는 객체의 필드가 변경되면 조회가 깨질 수 있다. 멀티스레드 환경에서는 일반 HashMap을 공유 쓰기하면 안전하지 않으므로 ConcurrentHashMap 같은 구조를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span><code>Queue</code>, <code>Deque</code>, <code>Stack</code>의 용도를 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Queue는 먼저 들어온 데이터를 먼저 처리하는 FIFO 구조이고, Stack은 마지막에 들어온 데이터를 먼저 처리하는 LIFO 구조다. Deque는 양쪽 끝에서 삽입과 삭제가 가능한 자료구조다.</p>
+<h4>답변</h4>
+<p>대기열, 작업 큐, 메시지 처리처럼 순서대로 처리해야 하는 경우 Queue가 적합하다. 괄호 검사, DFS, undo처럼 최근 데이터를 먼저 꺼내야 하는 경우 Stack 구조가 맞다. Java에서는 오래된 <code>Stack</code> 클래스보다 <code>ArrayDeque</code>를 stack/queue 용도로 쓰는 편이 일반적으로 낫다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>LRU Cache를 구현한다면 어떤 자료구조를 사용할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>LRU Cache는 가장 오래 사용되지 않은 항목을 먼저 제거하는 캐시 정책이다. 빠른 조회와 사용 순서 갱신이 동시에 필요하다.</p>
+<h4>답변</h4>
+<p>기본 설계는 HashMap과 doubly linked list를 함께 쓰는 방식이다. HashMap은 key로 노드를 O(1)에 찾고, linked list는 최근 사용 노드를 앞쪽으로 옮기며 가장 오래된 노드를 tail에서 제거한다. Java에서는 <code>LinkedHashMap</code>을 access-order로 설정하고 <code>removeEldestEntry</code>를 재정의해 간단히 구현할 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>Java Stream API의 장점과 단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Stream API는 컬렉션 데이터를 선언형 파이프라인으로 처리하는 기능이다. <code>filter</code>, <code>map</code>, <code>sorted</code>, <code>collect</code> 같은 연산을 조합한다.</p>
+<h4>답변</h4>
+<p>장점은 반복문보다 의도를 읽기 쉽고 중간 연산을 조합하기 편하다는 점이다. 단점은 복잡한 로직에서는 디버깅이 어려워지고, 불필요한 boxing이나 객체 생성이 성능 비용이 될 수 있다는 점이다. 병렬 스트림은 CPU 작업에는 도움이 될 수 있지만 I/O 작업이나 공유 상태 변경이 섞이면 오히려 장애와 성능 저하를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>Stream의 <code>map</code>, <code>flatMap</code>, <code>filter</code>, <code>reduce</code> 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>map</code>, <code>flatMap</code>, <code>filter</code>, <code>reduce</code>는 Stream의 대표 연산이다. 각각 변환, 평탄화, 조건 필터링, 누적 계산을 담당한다.</p>
+<h4>답변</h4>
+<p><code>map</code>은 요소 하나를 다른 값 하나로 바꾼다. <code>flatMap</code>은 요소 하나가 여러 값을 담은 Stream으로 바뀔 때 이를 하나의 Stream으로 펼친다. <code>filter</code>는 조건에 맞는 요소만 남기고, <code>reduce</code>는 여러 요소를 하나의 값으로 누적한다. 예를 들어 주문 목록에서 금액만 뽑는 것은 map, 주문별 상품 목록을 하나로 펼치는 것은 flatMap, 취소 주문 제외는 filter, 총합 계산은 reduce다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span><code>Optional</code>을 사용할 때 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>Optional</code>은 값이 없을 수 있음을 명시적으로 표현하는 반환 타입이다. null 반환을 줄이고 호출자가 부재 케이스를 처리하도록 유도한다.</p>
+<h4>답변</h4>
+<p><code>Optional</code>은 주로 메서드 반환 타입에 사용하고, 필드나 DTO, 파라미터에 남발하지 않는 것이 좋다. <code>get()</code>을 바로 호출하면 null 체크를 안 한 것과 비슷하게 예외가 날 수 있으므로 <code>orElse</code>, <code>orElseThrow</code>, <code>ifPresent</code> 등을 사용한다. 컬렉션은 Optional로 감싸기보다 빈 컬렉션을 반환하는 편이 보통 더 단순하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span><code>List</code>를 순회하면서 요소를 삭제할 때 발생할 수 있는 문제와 해결 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>List</code>를 enhanced for문이나 Iterator 외부 방식으로 순회하면서 직접 삭제하면 순회 상태와 컬렉션 변경 상태가 어긋날 수 있다. 대표적으로 <code>ConcurrentModificationException</code>이 발생한다.</p>
+<h4>답변</h4>
+<p>해결 방법은 <code>Iterator.remove()</code>를 사용하거나, Java 8 이상에서는 <code>removeIf</code>를 사용하는 것이다. 인덱스 기반 삭제가 필요하면 뒤에서 앞으로 순회하면 인덱스 밀림을 줄일 수 있다. 멀티스레드에서 같은 리스트를 수정한다면 동기화된 컬렉션이나 concurrent 컬렉션, 복사본 처리 전략을 검토해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>Comparable과 Comparator의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>Comparable</code>은 객체 자신이 기본 정렬 기준을 갖게 하는 인터페이스이고, <code>Comparator</code>는 외부에서 정렬 기준을 주입하는 인터페이스다.</p>
+<h4>답변</h4>
+<p><code>Comparable</code>은 <code>compareTo</code>를 구현하며 한 타입의 자연 순서를 정의할 때 적합하다. <code>Comparator</code>는 이름순, 날짜순, 점수순처럼 상황별 정렬 기준이 여러 개 필요할 때 적합하다. 정렬 기준은 equals와 일관성이 깨지면 TreeSet, TreeMap에서 중복 판단이 예상과 달라질 수 있어 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span><code>Collections.unmodifiableList()</code>와 불변 컬렉션의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>Collections.unmodifiableList()</code>는 원본 리스트를 수정 불가능한 view로 감싼 것이다. 완전한 불변 컬렉션과는 다르다.</p>
+<h4>답변</h4>
+<p>unmodifiable view 자체로는 add/remove가 막히지만, 원본 리스트 참조를 통해 원본이 바뀌면 view에서도 변경 결과가 보인다. 반면 <code>List.copyOf()</code>나 불변 컬렉션은 별도 불변 복사본을 만들어 외부 변경 영향을 줄인다. API 응답이나 설정 값처럼 외부에서 바뀌면 안 되는 데이터는 원본 참조를 끊는 불변 복사를 고려해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>대량 데이터 처리에서 Stream 사용 시 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>대량 데이터 처리에서 Stream은 코드 가독성은 좋지만 메모리 사용량, 중간 객체 생성, 병렬 처리 부작용을 고려해야 한다.</p>
+<h4>답변</h4>
+<p>DB 결과를 전부 메모리에 올린 뒤 Stream으로 처리하면 OOM 위험이 있다. paging, cursor, batch size를 사용해 처리 단위를 제한해야 한다. 중간 연산이 많거나 boxing이 반복되면 GC 부담이 커질 수 있고, parallelStream은 공용 ForkJoinPool을 사용하므로 서버 요청 처리와 섞이면 예측하기 어렵다. 대량 처리는 측정 후 반복문, 배치 chunk, DB 집계 중 적절한 방식을 선택한다.</p>
+</div>
+</details>
+<h2 id="3-java-동시성">3. Java 동시성</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>프로세스와 스레드의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>Java에서 스레드를 생성하는 방법을 두 가지 이상 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span><code>synchronized</code>의 동작 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>synchronized는 Java 객체의 monitor lock을 이용해 임계영역에 한 번에 하나의 스레드만 진입하게 하는 키워드다. mutual exclusion과 메모리 가시성을 함께 제공한다.</p>
+<h4>답변</h4>
+<p>스레드가 synchronized 블록이나 메서드에 들어가면 대상 객체의 lock을 획득하고, 나갈 때 lock을 해제한다. 같은 lock을 필요로 하는 다른 스레드는 대기한다. lock 해제 전의 변경은 이후 같은 lock을 획득한 스레드에 보인다. 범위가 너무 넓으면 처리량 저하와 deadlock 위험이 생기므로 공유 상태를 보호하는 최소 범위에 적용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span><code>volatile</code>의 의미와 한계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>volatile은 변수의 변경 값을 다른 스레드가 즉시 볼 수 있도록 가시성을 보장하는 키워드다. 특정 재정렬을 막는 메모리 장벽 효과도 있다.</p>
+<h4>답변</h4>
+<p>volatile은 단일 변수의 최신 값 확인에는 유용하지만, 읽기-수정-쓰기 복합 연산의 원자성은 보장하지 않는다. 예를 들어 count++는 읽고 더하고 쓰는 여러 단계라 volatile만으로 thread-safe하지 않다. 상태 플래그에는 적합하지만 카운터에는 AtomicInteger나 lock을 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span><code>AtomicInteger</code>가 thread-safe한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>AtomicInteger는 정수 값을 원자적으로 갱신하기 위한 클래스다. 내부적으로 CAS(compare-and-swap) 같은 원자 연산을 사용한다.</p>
+<h4>답변</h4>
+<p>여러 스레드가 동시에 증가시켜도 현재 값이 기대한 값일 때만 새 값으로 바꾸고, 실패하면 다시 시도한다. 그래서 synchronized 없이도 단순 카운터를 안전하게 갱신할 수 있다. 다만 여러 변수의 일관성을 함께 보장해야 하는 복합 상태에는 AtomicInteger 하나만으로 부족하고 lock이나 트랜잭션 경계가 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>race condition이 무엇인지 예시와 함께 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>race condition은 실행 결과가 여러 스레드의 실행 순서나 타이밍에 따라 달라지는 동시성 오류다. 공유 상태를 동기화 없이 변경할 때 자주 발생한다.</p>
+<h4>답변</h4>
+<p>예를 들어 두 스레드가 동시에 count++를 수행하면 둘 다 같은 값을 읽고 같은 결과를 저장해 증가분 하나가 사라질 수 있다. 해결은 공유 상태를 없애거나, synchronized/lock/Atomic 클래스/thread-safe collection을 사용해 원자성과 가시성을 보장하는 것이다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>deadlock의 발생 조건 4가지를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>deadlock은 둘 이상의 스레드가 서로 상대가 가진 자원을 기다리며 영원히 진행하지 못하는 상태다. 발생 조건은 상호 배제, 점유와 대기, 비선점, 순환 대기다.</p>
+<h4>답변</h4>
+<p>상호 배제는 자원을 한 번에 하나의 스레드만 사용할 수 있다는 뜻이다. 점유와 대기는 이미 가진 자원을 놓지 않은 채 다른 자원을 기다리는 상태다. 비선점은 다른 스레드의 자원을 강제로 빼앗을 수 없다는 뜻이고, 순환 대기는 A가 B를 기다리고 B가 A를 기다리는 식의 원형 대기다. 예방은 lock 획득 순서 통일, timeout 있는 lock, lock 범위 축소로 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>deadlock을 예방하거나 회피하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>deadlock 예방은 deadlock 발생 조건 중 하나 이상을 깨는 방식이다. 특히 순환 대기를 막는 lock 순서 통일이 실무에서 중요하다.</p>
+<h4>답변</h4>
+<p>모든 코드에서 lock을 같은 순서로 획득하게 만들고, 여러 lock을 오래 잡지 않도록 임계영역을 줄인다. tryLock과 timeout을 사용하면 무한 대기를 피할 수 있다. DB에서는 트랜잭션을 짧게 유지하고 같은 순서로 row를 갱신하며, deadlock 발생 시 재시도 가능한 구조를 둔다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span><code>wait()</code>와 <code>sleep()</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>wait와 sleep은 모두 스레드를 멈추지만 lock 처리와 목적이 다르다. wait는 객체 monitor 기반 협력 메서드이고 sleep은 단순 시간 대기 메서드다.</p>
+<h4>답변</h4>
+<p>wait는 synchronized 영역 안에서 호출하며 lock을 반납하고 notify/notifyAll 또는 timeout까지 대기한다. sleep은 현재 스레드를 지정 시간 동안 멈추지만 보유한 lock을 반납하지 않는다. 생산자-소비자처럼 조건 대기가 필요하면 wait/notify보다 BlockingQueue 같은 고수준 동시성 도구를 우선 고려한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span><code>notify()</code>와 <code>notifyAll()</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>notify와 notifyAll은 wait 중인 스레드를 깨우는 Object의 monitor 메서드다. notify는 하나의 대기 스레드만, notifyAll은 같은 monitor에서 대기 중인 모든 스레드를 깨운다.</p>
+<h4>답변</h4>
+<p>조건이 여러 종류이거나 어떤 스레드가 깨어야 안전한지 확실하지 않으면 notify는 잘못된 스레드만 깨워 진행이 멈출 수 있다. notifyAll은 더 많은 스레드를 깨워 비용은 크지만 조건을 다시 검사하게 해 안전성이 높다. 깨어난 스레드는 즉시 실행되는 것이 아니라 lock을 다시 획득해야 진행한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>ExecutorService를 사용하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>ExecutorService는 스레드 생성과 작업 실행을 분리하고 스레드 풀을 통해 작업을 관리하는 Java 동시성 API다.</p>
+<h4>답변</h4>
+<p>요청마다 스레드를 새로 만들면 생성 비용과 컨텍스트 스위칭 비용이 커지고 서버 자원이 쉽게 고갈된다. ExecutorService를 사용하면 동시 실행 수, queue, shutdown, Future 결과 처리를 관리할 수 있다. 운영에서는 pool size, queue 크기, rejection policy를 업무 특성에 맞춰 설정해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>ThreadPool의 core size와 max size를 어떻게 정할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>ThreadPool 크기는 작업이 CPU 중심인지 I/O 대기 중심인지에 따라 달라진다. CPU 작업은 코어 수에 가깝게, I/O 작업은 대기 시간이 있으므로 더 크게 잡을 수 있다.</p>
+<h4>답변</h4>
+<p>core size는 평상시 유지할 스레드 수이고 max size는 queue가 찼을 때 늘릴 수 있는 최대 스레드 수다. 너무 작으면 대기가 길어지고 너무 크면 context switching, DB connection 고갈, 외부 시스템 부하가 커진다. Tomcat thread, DB pool, 외부 API timeout을 함께 보고 부하 테스트로 조정한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>CPU-bound 작업과 I/O-bound 작업의 스레드 풀 크기 기준을 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span><code>Future</code>와 <code>CompletableFuture</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Future는 비동기 작업의 결과를 나중에 가져오기 위한 인터페이스이고, CompletableFuture는 결과 조합과 callback 처리를 지원하는 확장 API다.</p>
+<h4>답변</h4>
+<p>Future의 get은 결과가 준비될 때까지 blocking된다. CompletableFuture는 thenApply, thenCompose, exceptionally 같은 메서드로 후속 작업과 예외 처리를 체인으로 구성할 수 있다. 여러 외부 API를 병렬 호출해 결과를 합칠 때 유용하지만, 사용하는 Executor를 명확히 지정하지 않으면 공용 풀 사용으로 예측이 어려워질 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>병렬 처리에서 공유 mutable state가 위험한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>공유 mutable state는 여러 스레드가 동시에 읽고 쓰는 변경 가능한 상태를 말한다. 동시 접근 시 race condition, lost update, visibility 문제가 발생할 수 있다.</p>
+<h4>답변</h4>
+<p>예를 들어 여러 스레드가 같은 <code>int count</code>를 증가시키면 읽기-수정-쓰기 과정이 원자적이지 않아 증가분이 사라질 수 있다. 해결하려면 상태를 공유하지 않거나 불변 객체를 사용하고, 필요하면 <code>AtomicInteger</code>, lock, synchronized, thread-safe collection을 사용한다. 병렬 스트림에서도 외부 리스트에 add하는 방식보다 collector로 결과를 모으는 방식이 안전하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>고가용성 통신 서버에서 동시성 버그가 치명적인 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>고가용성 서버는 많은 요청을 지속적으로 처리해야 하므로 동시성 버그가 간헐적 장애, 데이터 불일치, 전체 지연으로 번질 수 있다.</p>
+<h4>답변</h4>
+<p>동시성 버그는 재현이 어렵고 특정 부하 상황에서만 나타나는 경우가 많다. 가입자 상태, 세션, 과금성 이벤트처럼 정합성이 중요한 데이터에서 race condition이 발생하면 단순 오류가 아니라 서비스 영향으로 이어진다. 그래서 공유 상태 최소화, 명확한 lock 범위, timeout, thread pool 제한, idempotency, 모니터링 지표가 함께 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>멀티스레드 환경에서 singleton을 안전하게 만드는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>ThreadLocal의 용도와 메모리 누수 위험을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>ThreadLocal은 같은 스레드 안에서만 접근 가능한 값을 저장하는 도구다. 요청 ID, 인증 컨텍스트, 트랜잭션 컨텍스트처럼 메서드 인자로 계속 넘기기 어려운 값을 보관할 때 사용된다.</p>
+<h4>답변</h4>
+<p>스레드 풀 환경에서는 요청이 끝나도 스레드가 재사용된다. ThreadLocal 값을 remove하지 않으면 다음 요청에 이전 데이터가 남거나 객체 참조가 유지되어 메모리 누수가 발생할 수 있다. 그래서 finally 블록이나 interceptor 종료 지점에서 반드시 정리해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>BlockingQueue가 어떤 상황에서 유용한지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>BlockingQueue는 queue가 비었을 때 소비자를 기다리게 하고, 가득 찼을 때 생산자를 기다리게 할 수 있는 thread-safe queue다.</p>
+<h4>답변</h4>
+<p>생산자-소비자 패턴, 비동기 작업 처리, 제한된 작업 버퍼에 유용하다. queue 크기를 제한하면 순간 트래픽을 흡수하면서도 메모리 폭증을 막을 수 있다. 단, 소비 속도보다 생산 속도가 계속 빠르면 지연이 누적되므로 모니터링과 rejection/backpressure 정책이 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>Java memory model에서 happens-before 관계가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>happens-before는 한 스레드의 작업 결과가 다른 스레드에 보이는 순서를 정의하는 Java Memory Model 규칙이다.</p>
+<h4>답변</h4>
+<p>멀티스레드에서는 컴파일러와 CPU 최적화로 명령 순서가 바뀌거나 값이 캐시에 머물 수 있다. happens-before 관계가 있으면 앞선 작업의 결과가 뒤 작업에 보이는 것이 보장된다. synchronized lock 해제와 이후 lock 획득, volatile write와 이후 read, Thread.start/join 등이 대표 예다.</p>
+</div>
+</details>
+<h2 id="4-jvm과-성능">4. JVM과 성능</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>JVM 메모리 구조를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>heap과 stack의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>heap과 stack은 JVM 메모리에서 역할이 다르다. heap은 객체 인스턴스가 저장되고 GC 대상이 되는 공유 메모리 영역이며, stack은 스레드마다 생성되어 메서드 호출 프레임과 지역 변수, 참조값을 저장한다.</p>
+<h4>답변</h4>
+<p>heap은 여러 스레드가 참조할 수 있어 동시성 이슈와 GC 영향을 받는다. stack은 스레드별로 분리되어 메서드 호출이 끝나면 프레임이 제거되고, 깊은 재귀는 StackOverflowError를 만들 수 있다. 필기에서는 “객체는 heap, 메서드 호출과 지역 변수는 stack, heap은 GC 대상”이라고 답하면 핵심이 잡힌다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>GC가 필요한 이유와 stop-the-world가 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>Young Generation과 Old Generation의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>Minor GC와 Major GC의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>메모리 누수가 발생하는 Java 코드 예시를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Java의 메모리 누수는 객체가 더 이상 필요 없는데도 참조가 남아 GC가 회수하지 못하는 상황이다. GC가 있어도 참조가 살아 있으면 메모리는 해제되지 않는다.</p>
+<h4>답변</h4>
+<p>예시는 static Map에 요청별 데이터를 계속 넣고 제거하지 않는 코드, ThreadLocal 값을 요청 종료 후 remove하지 않는 코드, listener를 등록만 하고 해제하지 않는 코드다. 증상은 heap 사용량이 GC 이후에도 계속 증가하고, full GC가 잦아지며 결국 OOM이 발생하는 것이다. 확인은 heap dump에서 dominator tree와 retained size를 보고 어떤 참조가 객체를 붙잡는지 추적한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>OutOfMemoryError 발생 시 확인할 지표와 로그를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>CPU 사용률이 높은 Java 프로세스를 분석하는 순서를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>thread dump에서 deadlock 또는 blocking 상태를 어떻게 확인할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>thread dump는 특정 시점의 Java 스레드 상태와 stack trace를 보여준다. BLOCKED, WAITING, TIMED_WAITING 상태와 lock 정보를 통해 병목을 추적한다.</p>
+<h4>답변</h4>
+<p>deadlock은 thread dump에 deadlock detected가 표시되거나, 여러 스레드가 서로 상대 lock을 기다리는 형태로 나타난다. blocking은 많은 스레드가 같은 monitor, DB pool, HTTP client call, queue 대기 지점에 몰려 있는지 본다. CPU 문제라면 OS thread id와 Java thread dump의 nid를 매칭해 바쁜 스택을 찾는다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>heap dump를 분석해야 하는 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>JIT 컴파일러의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>class loader의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>객체 생성이 많은 코드가 성능에 미치는 영향을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>객체 생성이 많아지면 heap 사용량과 GC 대상 객체가 늘어난다. 짧게 살다 사라지는 객체가 많으면 young GC가 잦아지고, 오래 살아남으면 old 영역 압박과 full GC로 이어질 수 있다.</p>
+<h4>답변</h4>
+<p>모든 객체 생성을 피해야 하는 것은 아니지만, 대량 루프나 고빈도 API에서 불필요한 임시 객체를 계속 만들면 latency가 흔들릴 수 있다. 문자열 반복 결합은 <code>StringBuilder</code>를 사용하고, 같은 값 객체를 반복 생성하는 구조는 캐싱이나 재사용 가능성을 검토한다. 다만 object pool을 직접 만드는 것은 복잡도를 높일 수 있어 측정 결과가 있을 때만 적용하는 편이 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>Java 서버에서 connection pool 누수가 발생하면 어떤 증상이 나타나는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>latency가 중요한 서버에서 GC 튜닝이 왜 중요한지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<h2 id="5-spring-boot와-spring-framework">5. Spring Boot와 Spring Framework</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Spring Framework의 IoC와 DI를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>Bean 생명주기를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring Bean 생명주기는 객체 생성, 의존성 주입, 초기화 callback, 사용, 소멸 callback의 흐름이다. 컨테이너가 Bean의 생성과 종료 시점을 관리한다.</p>
+<h4>답변</h4>
+<p>컨테이너는 Bean을 생성하고 의존성을 주입한 뒤 초기화 메서드를 호출한다. 초기화는 <code>@PostConstruct</code>, <code>InitializingBean</code>, custom init method로 처리할 수 있고, 종료 시에는 <code>@PreDestroy</code>, <code>DisposableBean</code>, destroy method가 호출된다. 외부 리소스 연결, 캐시 준비, connection 정리처럼 생명주기와 맞물린 작업은 이 callback 지점에 둔다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>Singleton Bean이 thread-safe하지 않을 수 있는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring singleton bean은 컨테이너 안에 인스턴스가 하나만 생성되어 여러 요청 스레드가 공유한다. 인스턴스가 하나라는 사실이 thread-safe를 의미하지는 않는다.</p>
+<h4>답변</h4>
+<p>singleton bean의 필드에 요청별 상태나 변경 가능한 값을 저장하면 동시 요청이 같은 필드를 읽고 써서 데이터가 섞일 수 있다. service bean은 상태를 두지 않는 stateless 구조로 만들고, 요청별 값은 지역 변수, 파라미터, request scope, 별도 저장소를 사용한다. 공유 캐시는 thread-safe collection과 동기화 정책이 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span><code>@Component</code>, <code>@Service</code>, <code>@Repository</code>, <code>@Controller</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span><code>@RestController</code>와 <code>@Controller</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>Spring Boot Auto Configuration의 동작 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span><code>@SpringBootApplication</code>에 포함된 주요 annotation을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>Filter와 Interceptor, AOP의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>AOP를 로깅, 트랜잭션, 인증에 사용할 수 있는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>Spring에서 프록시 기반 AOP의 한계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span><code>@Transactional</code>의 동작 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>같은 클래스 내부 메서드 호출에서 <code>@Transactional</code>이 적용되지 않을 수 있는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span><code>@Transactional(readOnly = true)</code>의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>transaction propagation 옵션 중 REQUIRED와 REQUIRES_NEW의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>트랜잭션 전파 속성은 이미 트랜잭션이 있는 상황에서 새 메서드가 어떤 트랜잭션에 참여할지 정하는 규칙이다. REQUIRED는 기존 트랜잭션이 있으면 참여하고 없으면 새로 만들며, REQUIRES_NEW는 기존 트랜잭션을 잠시 중단하고 항상 새 트랜잭션을 시작한다.</p>
+<h4>답변</h4>
+<p>REQUIRES_NEW는 배치에서 service_id별 처리 결과를 독립 커밋하거나, 로그/이력 저장을 본 작업 롤백과 분리할 때 유용하다. 다만 물리 커넥션을 추가로 사용할 수 있어 connection pool 고갈 위험이 있고, 내부 호출이면 Spring 프록시를 거치지 않아 적용되지 않을 수 있다. 그래서 실패 격리 단위, 커넥션 수, 호출 구조, 롤백 정책을 함께 설명해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>Controller, Service, Repository 계층을 나누는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>DTO와 Entity를 분리하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>validation을 Controller에서 할지 Service에서 할지 기준을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span><code>@ControllerAdvice</code>를 사용하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>Spring Boot Actuator로 확인할 수 있는 정보를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>운영 환경에서 profile을 분리해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>Spring MVC 요청 처리 흐름을 <code>Filter -&gt; DispatcherServlet -&gt; Controller</code> 관점에서 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>Servlet과 DispatcherServlet의 관계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<h2 id="6-rest-api와-web-backend">6. REST API와 Web Backend</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>RESTful API의 특징을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>HTTP method GET, POST, PUT, PATCH, DELETE의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>GET 요청이 idempotent해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>PUT과 PATCH의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>HTTP status code 200, 201, 204, 400, 401, 403, 404, 409, 500의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>API에서 pagination을 설계하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>offset pagination과 cursor pagination의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>API versioning 전략을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>request/response DTO를 분리하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>멱등성이 중요한 API 예시를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>중복 요청 방지 idempotency key를 설계하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>CORS가 무엇이고 언제 문제가 되는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>JWT의 구조와 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>Session 기반 인증과 Token 기반 인증의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>rate limiting이 필요한 이유와 구현 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>API timeout을 설정해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>외부 API 연동 시 retry를 무조건 걸면 위험한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>circuit breaker 패턴의 목적을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>REST API에서 에러 응답 포맷을 표준화해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>서버 간 통신에서 correlation id 또는 trace id가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>요청 ID, trace id, correlation id, batch execution id는 여러 로그와 시스템 호출을 하나의 흐름으로 묶어 추적하기 위한 식별자다. MSA, 외부 API 연동, 배치 처리에서는 한 요청이나 실행 단위가 여러 컴포넌트를 거치기 때문에 식별자가 없으면 원인 추적이 어려워진다.</p>
+<h4>답변</h4>
+<p>API 요청에는 request id 또는 trace id를 남기고, 배치에는 job execution id, step execution id, service_id 같은 처리 단위를 함께 남기는 것이 좋다. 이렇게 하면 특정 실패가 어느 요청, 어느 외부 호출, 어느 배치 실행에서 발생했는지 빠르게 좁힐 수 있다. 재처리할 때도 같은 식별자를 기준으로 중복 처리와 누락을 확인할 수 있다.</p>
+</div>
+</details>
+<h2 id="7-rdb-sql-트랜잭션">7. RDB, SQL, 트랜잭션</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>RDB와 NoSQL의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>primary key와 unique key의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>foreign key의 장점과 단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>index의 동작 원리를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>B-Tree index가 range query에 유리한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>B-Tree 인덱스는 key가 정렬된 트리 구조로 저장되는 인덱스다. 루트에서 리프까지 탐색해 시작 지점을 찾은 뒤, 정렬된 리프 노드를 순차적으로 따라가며 범위 데이터를 읽을 수 있다.</p>
+<h4>답변</h4>
+<p>그래서 <code>where created_at between ...</code>, <code>id &gt; 100</code>, prefix 조건처럼 연속된 범위를 읽는 쿼리에 유리하다. 반대로 인덱스 컬럼에 함수를 적용하거나 선행 컬럼 조건이 빠진 복합 인덱스는 range scan 효율이 떨어질 수 있다. 답변에는 “정렬 상태를 유지하기 때문에 시작점 탐색 후 순차 scan이 가능하다”는 말을 꼭 넣으면 된다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>composite index에서 컬럼 순서가 중요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>index를 많이 만들면 왜 쓰기 성능이 저하되는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>full table scan이 발생하는 원인을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>SQL 실행 계획에서 확인해야 할 항목을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>N+1 query 문제가 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>join의 종류 inner join, left join, right join을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>group by와 having의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>where 조건과 having 조건의 실행 의미를 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>transaction의 ACID를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>isolation level READ COMMITTED와 REPEATABLE READ의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>dirty read, non-repeatable read, phantom read를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>optimistic lock과 pessimistic lock의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>deadlock이 DB에서 발생하는 예시와 해결 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB deadlock은 두 개 이상의 트랜잭션이 서로가 가진 lock을 기다리면서 더 이상 진행하지 못하는 상태다. 예를 들어 트랜잭션 A가 1번 row를 잠그고 2번 row를 기다리는 동안, 트랜잭션 B가 2번 row를 잠그고 1번 row를 기다리면 deadlock이 발생한다.</p>
+<h4>답변</h4>
+<p>해결은 lock 획득 순서를 통일하고, 트랜잭션 범위를 짧게 유지하며, 적절한 인덱스로 불필요한 lock 범위를 줄이는 것이다. DB는 보통 deadlock을 감지하면 한 트랜잭션을 victim으로 롤백시키므로 애플리케이션은 예외를 기록하고 필요한 경우 멱등한 재시도를 설계해야 한다. 원인 분석 시에는 deadlock log, 실행 SQL, lock wait, 실행 계획을 함께 확인한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>connection pool이 고갈되는 원인을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>batch insert 성능을 높이는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>MariaDB와 PostgreSQL에서 sequence/auto increment 전략 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>대량 로그 테이블을 설계할 때 partitioning을 고려하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">23.</span><span>통신 시스템의 가입자/세션 데이터처럼 읽기와 쓰기가 많은 테이블의 인덱스 설계 기준을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">24.</span><span>장애 복구를 위해 DB 변경 이력을 남기는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 변경 이력은 언제, 누가, 어떤 데이터를, 어떤 값에서 어떤 값으로 바꿨는지 추적하기 위한 기록이다. 장애 복구와 감사, 원인 분석에 필요하다.</p>
+<h4>답변</h4>
+<p>방법은 audit table, history table, 변경 이벤트 발행, DB trigger, 애플리케이션 레벨 로그가 있다. 실무에서는 변경 전후 값, 요청 ID, 사용자/시스템 ID, 변경 사유, 배포 버전, 처리 시간을 남기면 원인 추적이 쉽다. 단, 민감 정보는 마스킹하거나 저장하지 않아야 하고, 이력 테이블이 본 트랜잭션 성능을 과도하게 떨어뜨리지 않게 분리와 보관 주기를 설계해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">25.</span><span>DB migration 도구를 사용하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB migration 도구는 스키마 변경을 버전으로 관리하고 여러 환경에 같은 순서로 적용하기 위해 사용한다. 대표적으로 Flyway, Liquibase가 있다.</p>
+<h4>답변</h4>
+<p>수동 SQL 적용은 누락, 순서 오류, 환경별 차이를 만들기 쉽다. migration 도구를 쓰면 어떤 변경이 적용됐는지 이력으로 남고, 애플리케이션 배포와 DB 변경을 함께 추적할 수 있다. 운영에서는 rollback 가능성, 대용량 테이블 lock, 기본값 추가 비용, 배포 전후 호환성을 반드시 검토해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">26.</span><span>정규화가 필요한 이유와 1정규형, 2정규형, 3정규형의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">27.</span><span>반정규화를 고려해야 하는 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">28.</span><span>Aurora MySQL 같은 managed DB를 사용할 때 운영 관점에서 장점과 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">29.</span><span>운영 DB와 통계 DB를 물리적으로 분리하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">30.</span><span>통계성 조회나 배치가 운영 DB에 주는 부하를 줄이는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">31.</span><span>DDL, DML, DCL의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">32.</span><span><code>ORDER BY</code>, <code>LIMIT</code>, <code>COUNT</code>, <code>DISTINCT</code>의 용도와 성능상 주의점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<h2 id="8-linux와-운영체제">8. Linux와 운영체제</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Linux에서 process 상태 <code>R</code>, <code>S</code>, <code>D</code>, <code>Z</code>의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>zombie process가 생기는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span><code>top</code>, <code>htop</code>, <code>ps</code>, <code>netstat</code> 또는 <code>ss</code> 명령어의 용도를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>특정 포트를 점유한 프로세스를 찾는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>프로세스는 실행 중인 프로그램의 독립 실행 단위이고, 스레드는 프로세스 안에서 CPU를 사용하는 실행 흐름이다. 프로세스는 메모리 공간이 분리되고, 스레드는 같은 프로세스의 heap 등을 공유한다.</p>
+<h4>답변</h4>
+<p>스레드는 생성과 전환 비용이 프로세스보다 낮고 데이터 공유가 쉽지만, 공유 상태 때문에 race condition과 deadlock 위험이 있다. Java 백엔드에서는 요청 처리, 외부 호출, 배치 병렬 처리에서 스레드를 많이 사용한다. 통신 서버는 장시간 연결과 많은 동시 요청을 다루므로 스레드 풀, timeout, lock 범위를 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>CPU load average의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>context switching이 많아지면 성능이 저하되는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>file descriptor가 고갈되면 어떤 문제가 생기는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>Linux에서 open file limit을 확인하고 조정하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>log file이 디스크를 가득 채웠을 때 발생하는 문제를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span><code>tail -f</code>, <code>grep</code>, <code>awk</code>, <code>sed</code>를 장애 분석에 어떻게 사용할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>foreground process와 background process의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>signal <code>SIGTERM</code>과 <code>SIGKILL</code>의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>graceful shutdown이 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>cron과 systemd timer의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>운영 서버에서 timezone 설정이 중요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<h2 id="9-네트워크와-tcp-ip">9. 네트워크와 TCP/IP</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>OSI 7 Layer와 TCP/IP 4 Layer를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>TCP와 UDP의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>TCP 3-way handshake를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>TCP 4-way close 과정을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>TIME_WAIT 상태가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>connection timeout과 read timeout의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>timeout은 네트워크 호출이 무한정 대기하지 않도록 끊는 기준이다. connection timeout은 TCP 연결을 맺기까지의 제한 시간이고, read timeout은 연결 후 응답 데이터를 기다리는 제한 시간이다.</p>
+<h4>답변</h4>
+<p>socket timeout은 문맥에 따라 read timeout과 비슷하게 쓰이거나 socket I/O 대기 시간 전체를 의미할 수 있다. connection timeout이 발생하면 대상 서버, 포트, 방화벽, 라우팅, listen 여부를 의심하고, read timeout은 서버 처리 지연, DB 지연, 외부 API 지연, 응답 크기 문제를 본다. 실무에서는 connect/read timeout을 분리하고 retry와 circuit breaker까지 함께 설계해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>keep-alive가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>HTTP/1.1과 HTTP/2의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>TLS handshake의 목적을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>TLS handshake는 암호화 통신을 시작하기 전에 서버 인증, 암호화 알고리즘 협상, 세션 키 합의를 수행하는 과정이다.</p>
+<h4>답변</h4>
+<p>클라이언트는 서버 인증서를 검증해 접속 대상이 신뢰 가능한 서버인지 확인한다. 이후 양쪽이 사용할 TLS 버전과 cipher suite를 정하고, 대칭키로 사용할 세션 키를 안전하게 합의한다. handshake가 끝나면 실제 HTTP 데이터는 합의된 대칭키로 암호화되어 기밀성과 무결성을 제공한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>DNS resolution 과정을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>NAT가 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>load balancer L4와 L7의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>health check가 잘못 설정되면 어떤 문제가 생기는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>packet loss가 API latency에 미치는 영향을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>socket programming에서 backlog의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>서버가 <code>Connection refused</code>를 반환하는 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>서버가 <code>Connection timed out</code>을 반환하는 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>통신 Core 시스템에서 네트워크 지연과 장애 감지가 중요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 Core 시스템은 인증, 세션, 라우팅, 트래픽 제어처럼 서비스 연결에 직접 영향을 주는 기능을 처리한다. 네트워크 지연이나 장애 감지가 늦으면 사용자 요청 지연과 연쇄 장애로 이어질 수 있다.</p>
+<h4>답변</h4>
+<p>외부 노드나 다른 네트워크 기능 호출이 느려졌는데 timeout이 길면 thread와 connection이 묶여 정상 요청까지 대기한다. 따라서 latency, timeout, error rate, retry 횟수, circuit breaker open 여부를 지표로 보고 빠르게 장애 구간을 분리해야 한다. 장애 감지는 단순 ping보다 실제 API health, 의존성 상태, 요청 성공률을 함께 보는 것이 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>long-lived connection과 short-lived connection의 장단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>메시지 프로토콜 설계 시 header/body를 분리하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>HTTP와 HTTPS의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>HTTP는 평문으로 웹 요청과 응답을 주고받는 애플리케이션 계층 프로토콜이고, HTTPS는 HTTP에 TLS를 적용한 보안 통신이다.</p>
+<h4>답변</h4>
+<p>HTTP는 중간에서 내용이 노출되거나 변조될 수 있다. HTTPS는 TLS를 통해 서버 인증, 데이터 암호화, 무결성 검증을 제공한다. 로그인, 토큰, 개인정보, 결제 정보뿐 아니라 일반 API도 중간자 공격을 줄이기 위해 HTTPS를 사용하는 것이 기본이다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>HTTPS에서 TLS가 어떤 역할을 하는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>TLS는 HTTPS에서 보안 계층 역할을 하며 HTTP 메시지를 안전하게 전송하도록 만든다. 제공하는 핵심 가치는 기밀성, 무결성, 인증이다.</p>
+<h4>답변</h4>
+<p>TLS는 handshake에서 서버 인증서를 검증하고 암호화 알고리즘과 세션 키를 합의한다. 이후 HTTP request와 response는 대칭키로 암호화되어 전송된다. 이 과정으로 도청, 변조, 서버 사칭 위험을 줄인다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">23.</span><span>TCP가 신뢰성을 보장하는 방법을 ACK, sequence number, 재전송, 흐름제어, 혼잡제어 관점에서 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>TCP는 연결 지향 프로토콜이며 데이터를 순서대로, 손실 없이 전달하기 위해 여러 제어 기능을 사용한다. 핵심은 ACK, sequence number, 재전송, 흐름제어, 혼잡제어다.</p>
+<h4>답변</h4>
+<p>송신자는 각 바이트 흐름에 sequence number를 붙이고, 수신자는 받은 데이터에 대해 ACK를 보낸다. ACK가 오지 않거나 손실이 감지되면 재전송한다. 흐름제어는 수신자가 처리 가능한 양에 맞춰 송신량을 조절하고, 혼잡제어는 네트워크 혼잡 상황에서 송신 속도를 낮춰 전체 네트워크 붕괴를 막는다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">24.</span><span>HTTP가 TCP 위에서 동작한다는 말의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>HTTP는 애플리케이션 계층 프로토콜이고, TCP는 전송 계층 프로토콜이다. HTTP 메시지는 TCP 연결이 제공하는 바이트 스트림 위에서 전달된다.</p>
+<h4>답변</h4>
+<p>클라이언트가 서버와 TCP 연결을 맺은 뒤 HTTP request를 보내고, 서버는 HTTP response를 같은 연결로 반환한다. TCP는 순서 보장과 재전송을 담당하고, HTTP는 method, URL, header, body, status code 같은 웹 요청 의미를 정의한다. 그래서 HTTP 응답 지연을 볼 때는 애플리케이션 처리뿐 아니라 TCP 연결 생성, keep-alive, packet loss, timeout도 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">25.</span><span>HTTP가 stateless하다는 말의 의미를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">26.</span><span>서버가 상태를 유지하기 위해 Session, Cookie, JWT를 사용하는 방식을 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">27.</span><span>Socket이 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">28.</span><span>ServerSocket 기반 socket 통신 과정을 <code>bind</code>, <code>listen</code>, <code>accept</code>, <code>send/receive</code> 흐름으로 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">29.</span><span>TCP 연결 종료가 3-way가 아니라 4-way로 이루어지는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">30.</span><span>OSI 7계층에서 HTTP, TCP, IP, Ethernet이 각각 어느 계층에 속하는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">31.</span><span>IP 주소, Port, Socket의 관계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">32.</span><span>HTTP header, body, Content-Type, Authorization header의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>HTTP 메시지는 시작 줄, header, 빈 줄, body로 구성된다. header는 요청/응답의 부가 정보와 메타데이터를 담고, body는 실제 전송 데이터를 담는다.</p>
+<h4>답변</h4>
+<p><code>Content-Type</code>은 body의 형식을 알려준다. 예를 들어 <code>application/json</code>이면 서버는 JSON으로 파싱한다. <code>Authorization</code> header는 Bearer token 같은 인증 정보를 전달하는 데 사용한다. 민감한 인증 정보가 들어가므로 HTTPS 사용과 로그 마스킹이 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">33.</span><span>connection timeout, read timeout, socket timeout의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>timeout은 네트워크 호출이 무한정 대기하지 않도록 끊는 기준이다. connection timeout은 TCP 연결을 맺기까지의 제한 시간이고, read timeout은 연결 후 응답 데이터를 기다리는 제한 시간이다.</p>
+<h4>답변</h4>
+<p>socket timeout은 문맥에 따라 read timeout과 비슷하게 쓰이거나 socket I/O 대기 시간 전체를 의미할 수 있다. connection timeout이 발생하면 대상 서버, 포트, 방화벽, 라우팅, listen 여부를 의심하고, read timeout은 서버 처리 지연, DB 지연, 외부 API 지연, 응답 크기 문제를 본다. 실무에서는 connect/read timeout을 분리하고 retry와 circuit breaker까지 함께 설계해야 한다.</p>
+</div>
+</details>
+<h2 id="10-알고리즘과-코딩-테스트형-문제">10. 알고리즘과 코딩 테스트형 문제</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>배열에서 중복되지 않는 첫 번째 값을 찾는 알고리즘을 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>문자열이 palindrome인지 확인하는 함수를 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>괄호 문자열이 올바른지 판별하는 함수를 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>LRU Cache를 구현하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>LRU Cache는 제한된 용량에서 가장 오래 사용되지 않은 데이터를 제거하는 캐시다. 조회, 삽입, 사용 순서 갱신, 오래된 항목 제거가 빠르게 동작해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap과 doubly linked list를 조합하면 get/put을 O(1)에 처리할 수 있다. get 시 노드를 찾아 리스트의 head로 옮기고, put 시 기존 key면 값을 갱신한 뒤 head로 옮긴다. 용량을 초과하면 tail 노드를 제거하고 Map에서도 삭제한다. Java에서는 <code>LinkedHashMap</code>의 access-order 옵션으로 같은 정책을 간단히 구현할 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>두 정렬 배열을 병합하는 함수를 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>linked list에서 cycle을 감지하는 알고리즘을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>binary search를 구현하고 시간 복잡도를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>BFS와 DFS의 차이를 설명하고 각각 구현하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>graph에서 최단 경로를 구하는 알고리즘을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>Dijkstra 알고리즘이 음수 간선에서 사용할 수 없는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>sliding window를 사용해 연속 부분 배열의 최대합을 구하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>hash map을 사용해 two sum 문제를 해결하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>대량 로그에서 가장 많이 등장한 user id 상위 K개를 찾는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>문자열 배열을 anagram group으로 묶는 알고리즘을 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>재귀와 반복문의 장단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>stack overflow가 발생하는 재귀 코드를 어떻게 개선할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>JVM은 Java bytecode를 실행하는 런타임이며 메모리 관리, GC, JIT 컴파일, class loading을 담당한다. 주요 메모리 영역으로 heap, stack, method area/metaspace, PC register, native method stack을 설명할 수 있다.</p>
+<h4>답변</h4>
+<p>heap은 객체가 저장되는 영역이고 GC 대상이다. stack은 스레드별 메서드 호출 프레임과 지역 변수가 쌓이는 영역이다. 운영 장애에서는 GC log, heap 사용량, thread dump, heap dump, CPU 프로파일을 함께 봐야 하며, stop-the-world 시간이 길면 latency가 중요한 서버에서 응답 지연으로 바로 드러난다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>시간 복잡도 O(N), O(N log N), O(N^2)의 차이를 예시로 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>통신 이벤트 로그에서 특정 시간 구간의 요청 수를 빠르게 구하는 자료구조를 설계하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>시간 구간별 요청 수 조회는 이벤트를 시간순으로 저장하고 구간 합을 빠르게 계산하는 문제다. 데이터 규모와 갱신 방식에 따라 prefix sum, sliding window, time bucket을 선택할 수 있다.</p>
+<h4>답변</h4>
+<p>분 단위나 초 단위 집계가 허용된다면 timestamp를 bucket으로 나누고 각 bucket의 count를 증가시킨다. 임의 구간 조회가 많으면 bucket count의 prefix sum을 유지해 시작 전 누적값과 끝 누적값의 차이로 계산한다. 실시간 최근 구간만 필요하면 deque나 ring buffer로 오래된 bucket을 제거한다. 분산 환경에서는 노드별 집계 후 병합하거나 Redis sorted set/time-series 저장소를 고려한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>장애 이벤트가 시간순으로 들어올 때 최근 5분간 실패율을 계산하는 방법을 설계하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>문자열 형태의 프로토콜 메시지를 파싱하고 필수 필드를 검증하는 코드를 작성하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>알고리즘 문제는 정답 코드보다 자료구조 선택과 시간 복잡도 설명이 중요하다. 입력 크기, 정렬 여부, 중복 여부, 메모리 제한을 먼저 확인하고 접근 방식을 정해야 한다.</p>
+<h4>답변</h4>
+<p>HashMap은 빈도 계산과 빠른 조회, Stack은 괄호 검증, Queue는 BFS, PriorityQueue는 상위 K나 최단거리 후보 관리에 자주 쓰인다. 통신 이벤트 로그처럼 시간 구간 집계가 필요하면 sliding window, time bucket, prefix sum, stream aggregation을 고려할 수 있다. 답변에는 시간 복잡도와 장애 상황에서의 검증 기준까지 붙이면 경력직 답변으로 좋다.</p>
+</div>
+</details>
+<h2 id="11-설계와-아키텍처">11. 설계와 아키텍처</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Monolithic Architecture와 MSA의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>MSA의 장점과 단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>service discovery가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>API Gateway의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>circuit breaker, bulkhead, retry, timeout의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>timeout, retry, circuit breaker, bulkhead는 외부 의존성 장애가 전체 시스템으로 번지는 것을 줄이는 resilience 패턴이다. 각각 대기 제한, 재시도, 빠른 차단, 자원 격리를 담당한다.</p>
+<h4>답변</h4>
+<p>timeout은 응답을 무한정 기다리지 않도록 최대 대기 시간을 정한다. retry는 일시적 실패를 다시 시도하지만 멱등 요청과 제한된 횟수, backoff가 필요하다. circuit breaker는 실패율이 높아진 의존성을 잠시 차단해 빠르게 실패하게 한다. bulkhead는 thread pool, connection pool, queue를 기능별로 나눠 한 영역의 장애가 전체 자원을 고갈시키지 않게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>분산 시스템에서 eventual consistency가 필요한 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>Saga 패턴과 2PC의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>message queue를 사용하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Message Queue는 서비스 사이의 작업이나 이벤트를 비동기적으로 전달하는 중간 저장소다. 송신자와 수신자의 처리 속도 차이를 흡수하고, 순간 트래픽을 완충하며, 장애 시 재처리 지점을 만들 수 있다.</p>
+<h4>답변</h4>
+<p>큐를 쓰면 외부 시스템 지연이나 특정 소비자 장애가 즉시 호출자 장애로 번지는 것을 줄일 수 있다. 대신 중복 소비, 순서 보장 범위, 재시도, dead letter queue, 멱등 처리 설계가 필요하다. Kafka나 RabbitMQ 같은 제품 선택은 처리량, 라우팅 필요성, 재처리 방식, 메시지 보존 요구사항을 기준으로 비교한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>Kafka와 RabbitMQ의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>event-driven architecture의 장단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>CQRS가 필요한 상황과 단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>cache aside 패턴을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>cache stampede가 무엇이고 어떻게 막을 수 있는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>Redis를 session store로 사용할 때 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>고가용성 서버 설계에서 active-active와 active-standby를 비교하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>장애 격리를 위해 시스템을 어떻게 나눌지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>장애 격리는 한 부분의 실패가 전체 시스템 실패로 확산되지 않도록 경계를 나누는 설계다. 서비스, DB, thread pool, connection pool, queue, timeout 정책을 분리하는 방식이 있다.</p>
+<h4>답변</h4>
+<p>핵심 기능과 부가 기능을 같은 리소스에 묶지 않고, 외부 연동별 timeout과 circuit breaker를 둔다. 읽기/쓰기 DB나 운영/통계 DB를 분리하면 대량 조회가 실시간 처리에 주는 영향을 줄일 수 있다. 배치도 처리 단위를 나누고 실패 단위를 작게 만들어 재처리 범위를 제한해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>배포 중 무중단을 달성하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>blue-green 배포와 rolling 배포의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>configuration을 코드와 분리해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>통신망 솔루션에서 안정성과 관측성이 중요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>Cache를 사용하는 이유와 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>Redis를 cache로 사용할 때 장점과 장애 시 주의할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">23.</span><span>Cache Aside Pattern의 동작 방식과 단점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">24.</span><span>실패 격리 전략이 필요한 이유를 설명하고, circuit breaker와 bulkhead를 예로 들어 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>실패 격리는 한 기능, 외부 시스템, 배치 단위의 장애가 전체 서비스 장애로 번지지 않도록 경계를 나누는 설계다. 대표적으로 circuit breaker는 실패가 누적된 호출을 빠르게 차단하고, bulkhead는 자원을 격리한다.</p>
+<h4>답변</h4>
+<p>circuit breaker는 외부 API가 느리거나 실패할 때 계속 호출하지 않고 일정 시간 차단해 thread와 connection 고갈을 막는다. bulkhead는 기능별 thread pool, connection pool, queue를 분리해 한 영역 장애가 전체 자원을 잡아먹지 않게 한다. 배치에서는 service_id 단위 트랜잭션, 재처리 큐, 실패 이력 저장으로 실패 범위를 좁힐 수 있다.</p>
+</div>
+</details>
+<h2 id="12-tomcat-gradle-배포">12. Tomcat, Gradle, 배포</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Tomcat의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>Servlet container와 Spring Boot embedded Tomcat의 관계를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>Tomcat thread pool이 고갈되면 어떤 증상이 나타나는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>Tomcat max threads와 DB connection pool size를 함께 고려해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>Gradle과 Maven의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>Gradle multi-module project의 장점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>dependency conflict가 발생했을 때 해결 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>build profile 또는 environment별 설정 분리가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>jar 배포와 war 배포의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>운영 배포 전 smoke test가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>rollback 가능한 배포 전략을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>application log와 access log를 분리해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>health check endpoint를 설계할 때 DB까지 확인할지 기준을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>graceful shutdown 시 처리 중인 요청을 어떻게 마무리할지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>장애 시 빠르게 원인을 좁히기 위해 어떤 로그 필드를 남길지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>장애 분석 로그는 요청의 흐름을 한 줄이 아니라 여러 시스템에 걸쳐 연결할 수 있어야 한다. 이를 위해 correlation id나 trace id가 중요하다.</p>
+<h4>답변</h4>
+<p>필수 필드는 timestamp, trace/request id, user 또는 service id, API path, method, status code, latency, error code, exception type/message, 외부 호출 대상과 소요 시간, DB 처리 시간, 서버 인스턴스, 배포 버전이다. 개인정보와 토큰은 원문 저장하지 않고 마스킹한다. 로그 레벨은 정상 흐름과 장애 흐름을 구분하고, 같은 요청 ID로 애플리케이션 로그와 외부 호출 로그를 함께 추적할 수 있어야 한다.</p>
+</div>
+</details>
+<h2 id="13-보안">13. 보안</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>SQL Injection이 무엇이고 어떻게 방어하는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>SQL Injection은 사용자 입력이 SQL 문법으로 해석되어 의도하지 않은 쿼리가 실행되는 공격이다. 문자열 결합으로 SQL을 만들 때 주로 발생한다.</p>
+<h4>답변</h4>
+<p>방어는 prepared statement와 parameter binding을 사용하는 것이다. ORM이나 MyBatis를 쓰더라도 문자열 치환 방식인 ${}는 조심하고, 값 바인딩인 #{}를 사용한다. 입력값 검증, 최소 권한 DB 계정, 에러 메시지 노출 제한도 함께 적용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>XSS와 CSRF의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>XSS는 공격자가 삽입한 스크립트가 사용자의 브라우저에서 실행되는 공격이고, CSRF는 인증된 사용자의 브라우저를 이용해 원치 않는 요청을 보내게 하는 공격이다.</p>
+<h4>답변</h4>
+<p>XSS는 출력 인코딩, HTML sanitizing, CSP, 쿠키 HttpOnly 설정으로 줄인다. CSRF는 CSRF token, SameSite cookie, Origin/Referer 검증으로 방어한다. XSS는 스크립트 실행이 핵심이고 CSRF는 인증 상태 악용이 핵심이다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>password를 평문 저장하면 안 되는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>비밀번호를 평문 저장하면 DB나 로그가 유출되는 순간 모든 계정의 비밀번호가 그대로 노출된다. 사용자가 같은 비밀번호를 다른 서비스에서도 쓰면 피해가 확산된다.</p>
+<h4>답변</h4>
+<p>비밀번호는 복호화 가능한 암호화보다 단방향 password hashing을 사용한다. salt를 계정별로 다르게 두고 bcrypt, scrypt, Argon2처럼 느린 해시 알고리즘을 사용해 brute force 비용을 높인다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>bcrypt, scrypt, Argon2 같은 password hashing이 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>bcrypt, scrypt, Argon2는 비밀번호 저장에 맞게 설계된 느린 단방향 해시 알고리즘이다. 일반 해시보다 무차별 대입 공격 비용을 높인다.</p>
+<h4>답변</h4>
+<p>bcrypt는 cost factor로 계산 비용을 조절할 수 있고, scrypt와 Argon2는 메모리 비용까지 사용해 GPU 기반 공격을 어렵게 한다. 계정별 salt를 함께 사용해 같은 비밀번호라도 다른 해시가 나오게 해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>인증과 인가의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>인증은 사용자가 누구인지 확인하는 과정이고, 인가는 인증된 사용자가 특정 자원이나 기능에 접근할 권한이 있는지 판단하는 과정이다.</p>
+<h4>답변</h4>
+<p>로그인은 인증에 해당하고, 관리자 페이지 접근 가능 여부 판단은 인가에 해당한다. 인증이 성공해도 모든 기능을 사용할 수 있는 것은 아니므로 role, permission, resource ownership 기준으로 인가를 별도로 검사해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>least privilege 원칙을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>least privilege는 사용자, 프로세스, 시스템 계정에 필요한 최소 권한만 부여하는 보안 원칙이다.</p>
+<h4>답변</h4>
+<p>권한이 과하면 계정 탈취나 버그가 발생했을 때 피해 범위가 커진다. 운영 DB 계정, 배포 계정, 개발자 계정, API token 권한을 분리하고 읽기 전용과 쓰기 권한도 나누는 것이 좋다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>TLS를 사용해도 application level 보안이 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>API key를 코드에 직접 넣으면 안 되는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>API key를 코드에 직접 넣으면 저장소, 빌드 로그, 이미지, 배포 산출물에 비밀 값이 남을 수 있다. 한 번 유출되면 외부 API 오남용과 비용 피해로 이어질 수 있다.</p>
+<h4>답변</h4>
+<p>API key는 환경 변수, secret manager, vault 같은 비밀 관리 시스템에서 주입한다. 로그에 출력하지 않고, 권한 범위와 만료 기간을 제한하며, 유출 시 즉시 폐기하고 재발급할 수 있어야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>로그에 개인정보나 토큰을 남기면 안 되는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>로그는 여러 시스템에 복제되고 장기간 보관될 수 있어 개인정보나 토큰이 남으면 유출 피해가 커진다. 토큰은 그대로 인증 수단으로 악용될 수 있다.</p>
+<h4>답변</h4>
+<p>비밀번호, 인증 토큰, 주민번호, 전화번호, 이메일 등은 저장하지 않거나 마스킹한다. 장애 분석에는 원문 대신 식별 가능한 request id, user id hash, error code를 남긴다. 로그 접근 권한과 보관 기간도 제한해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>deserialization 취약점이 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>deserialization 취약점은 신뢰할 수 없는 직렬화 데이터를 객체로 복원하는 과정에서 악성 객체나 gadget chain이 실행되는 문제다.</p>
+<h4>답변</h4>
+<p>방어는 신뢰하지 않는 입력을 Java native serialization으로 역직렬화하지 않는 것이다. 허용 클래스 목록을 제한하고, JSON 같은 안전한 포맷도 타입 정보 자동 바인딩을 조심한다. 라이브러리 취약점 패치와 입력 검증도 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>file upload 기능에서 검증해야 할 항목을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>파일 업로드는 악성 파일 저장, 경로 조작, 대용량 업로드, 스크립트 실행 위험을 가진 기능이다.</p>
+<h4>답변</h4>
+<p>확장자와 MIME type을 모두 확인하고, 파일 크기 제한, 저장 경로 고정, 파일명 재생성, 실행 권한 제거를 적용한다. 이미지라면 실제 파싱 검증을 하고, 업로드 파일은 가능하면 웹 루트 밖이나 object storage에 저장한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>dependency vulnerability를 관리하는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>dependency vulnerability 관리는 사용하는 라이브러리의 알려진 보안 취약점을 추적하고 패치하는 과정이다.</p>
+<h4>답변</h4>
+<p>Gradle/Maven dependency tree를 확인하고, Dependabot, OWASP Dependency-Check, SCA 도구를 사용해 CVE를 탐지한다. 취약점은 영향 범위와 exploit 가능성을 보고 우선순위를 정해 업데이트하며, 직접 의존성과 transitive dependency를 함께 관리한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>통신 시스템에서 signaling message 위변조를 방지하기 위한 일반적인 보안 고려사항을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>signaling message는 세션 제어, 인증, 라우팅 같은 중요한 제어 정보를 담기 때문에 위변조되면 서비스 오동작으로 이어질 수 있다.</p>
+<h4>답변</h4>
+<p>전송 구간 암호화와 무결성 검증을 적용하고, 송신 주체 인증과 권한 검사를 수행한다. replay 공격을 줄이기 위해 nonce, timestamp, sequence 검증을 고려한다. 로그에는 메시지 원문 전체보다 추적 가능한 식별자와 검증 실패 사유를 남긴다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>내부망 서비스라도 인증/인가가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>내부망도 완전히 신뢰할 수 있는 경계가 아니다. 계정 탈취, 잘못된 방화벽 설정, 내부자 위협, SSRF 같은 경로로 접근될 수 있다.</p>
+<h4>답변</h4>
+<p>Zero Trust 관점에서는 내부 서비스 간 호출도 호출 주체를 확인하고 필요한 권한만 허용한다. mTLS, service account, API gateway, network policy, 감사 로그를 사용해 내부 이동과 권한 오남용을 줄인다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>운영 권한 계정과 개발 권한 계정을 분리해야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>운영 권한과 개발 권한을 분리하면 실수와 침해 사고의 영향 범위를 줄일 수 있다. 개발 중 사용하는 권한이 운영 데이터 변경 권한까지 가지면 위험하다.</p>
+<h4>답변</h4>
+<p>운영 접근은 승인, 감사 로그, MFA, 시간 제한을 두고 관리한다. 개발 계정은 테스트 환경 중심으로 제한하고, 운영 DB 직접 수정은 break-glass 절차나 별도 승인 경로로 통제한다.</p>
+</div>
+</details>
+<h2 id="14-통신-도메인-기초">14. 통신 도메인 기초</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>이동통신 Core Network가 하는 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>IMS가 무엇이고 어떤 서비스를 위해 사용되는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>HLR과 HSS의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>HLR과 HSS는 이동통신망에서 가입자 정보와 인증 관련 데이터를 관리하는 핵심 가입자 데이터베이스 성격의 시스템이다. HLR은 2G/3G 계열에서, HSS는 LTE/IMS 계열에서 주로 언급된다.</p>
+<h4>답변</h4>
+<p>HLR은 가입자 위치, 서비스 권한, 인증 정보 등을 관리하고, HSS는 LTE/EPC와 IMS에서 가입자 프로파일, 인증 벡터, 서비스 관련 정보를 제공한다. Java 백엔드 지원자가 깊은 프로토콜까지 외울 필요는 낮지만, 텔코웨어가 Core Network/IMS 회사이므로 “가입자 정보와 인증/서비스 프로파일을 관리하는 핵심 시스템” 수준은 설명할 수 있어야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>5G Core에서 UDM과 UDR의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>NRF가 필요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>UPF의 역할을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>SEPP가 필요한 상황을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>가입자 정보와 세션 정보는 왜 정합성이 중요한지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>통신망 서버가 일반 웹 서비스보다 고가용성을 강하게 요구하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신망 서버는 가입자 인증, 세션 유지, 음성/데이터 연결, 과금 연동처럼 통신 서비스의 기본 기능과 연결된다. 장애가 나면 단순 화면 오류가 아니라 서비스 접속 불가나 통화 품질 저하로 이어질 수 있다.</p>
+<h4>답변</h4>
+<p>일반 웹 서비스도 가용성이 중요하지만, 통신망 Core 영역은 대규모 가입자와 실시간 처리를 전제로 하므로 장애 허용 시간이 더 짧다. 그래서 active-standby, scale-out, health check, failover, circuit breaker, 데이터 복제, 모니터링과 알람 기준이 중요하다. 또한 장애 시 영향 범위를 가입자, 지역, 네트워크 기능, API 단위로 빠르게 좁혀야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>signaling traffic과 user traffic의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>signaling traffic은 통신 연결을 설정, 유지, 해제하기 위한 제어 메시지 흐름이고, user traffic은 사용자의 실제 데이터 흐름이다.</p>
+<h4>답변</h4>
+<p>예를 들어 인증, 세션 생성, 라우팅, 핸드오버 제어는 signaling traffic에 가깝고, 사용자가 주고받는 음성, 영상, 웹 데이터는 user traffic에 가깝다. signaling이 지연되거나 실패하면 데이터 경로가 정상이어도 세션 수립과 서비스 이용이 실패할 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>protocol stack이 무엇인지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>protocol stack은 네트워크 통신을 여러 계층의 프로토콜이 역할을 나눠 처리하는 구조다. 각 계층은 자기 역할을 수행하고 아래 계층 서비스를 사용한다.</p>
+<h4>답변</h4>
+<p>예를 들어 웹 요청은 애플리케이션 계층의 HTTP, 전송 계층의 TCP, 네트워크 계층의 IP, 데이터링크 계층의 Ethernet/Wi-Fi를 거쳐 전달된다. 계층을 나누면 각 프로토콜의 역할이 분리되어 구현과 문제 분석이 쉬워진다. 장애 분석 시 HTTP 상태코드 문제인지, TCP 연결 문제인지, IP 라우팅 문제인지 계층별로 나눠 볼 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>active-standby 이중화에서 failover 시 고려해야 할 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>통신 시스템에서 O&amp;M이 무엇을 의미하는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>대량 가입자 데이터를 조회하는 API에서 latency를 낮추는 방법을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>장애 발생 시 통신망 서비스 영향 범위를 어떻게 좁혀 볼지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신망 장애의 영향 범위 분석은 전체 장애인지, 특정 기능/지역/가입자/외부 연동 장애인지 빠르게 분리하는 과정이다.</p>
+<h4>답변</h4>
+<p>먼저 알람 발생 시각과 배포 변경을 확인하고, 성공률, latency, error code를 API와 네트워크 기능 단위로 나눈다. 특정 지역, 특정 장비, 특정 subscriber group, 특정 외부 연동에서만 실패하는지 비교한다. 이후 health check, dependency 상태, DB/queue 지표, 로그의 trace id를 연결해 장애 구간을 좁히고 우회, failover, rollback 중 복구 시간이 짧은 조치를 선택한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>VNF와 CNF의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>Kubernetes 환경에서 CNF를 운영할 때 readiness/liveness probe가 중요한 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>MANO가 어떤 역할을 하는지 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>네트워크 기능을 cloud native하게 만들 때 어려운 점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>텔코웨어 특성상 네트워크 기초는 우선순위가 높다. OSI/TCP-IP 계층, TCP 연결/종료, timeout, HTTP/HTTPS, Socket의 관계를 설명할 수 있어야 한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결 지향, 신뢰성, 순서 보장을 제공하고 UDP는 비연결 기반으로 빠르지만 신뢰성 보장은 애플리케이션이 보완해야 한다. 3-way handshake는 SYN, SYN+ACK, ACK로 연결을 확인하고, 4-way close는 양방향 종료가 독립적이라 FIN/ACK가 나뉜다. HTTPS는 HTTP 위에 TLS를 적용해 암호화, 무결성, 서버 인증을 제공하며, Socket은 IP와 Port를 통해 프로세스 간 통신을 식별하는 endpoint다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>5G/LTE Core 솔루션 회사에서 Java 백엔드 개발자가 네트워크 지식을 알아야 하는 이유를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<h2 id="15-실무형-서술-문제">15. 실무형 서술 문제</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>API 응답 시간이 갑자기 5초 이상으로 증가했다. 원인을 확인하는 순서를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>응답 시간 증가는 애플리케이션 처리, DB, 외부 API, 네트워크, 리소스 부족 중 어디에서 시간이 늘었는지 나눠 봐야 한다.</p>
+<h4>답변</h4>
+<p>먼저 p95/p99 latency와 발생 시각, 영향 API, 트래픽 증가 여부를 확인한다. 그 다음 애플리케이션 로그의 구간별 소요 시간, thread pool 대기, DB connection pool, slow query, 외부 API timeout, GC pause, CPU/memory를 본다. 최근 배포나 설정 변경이 있으면 변경 전후 지표를 비교하고, 원인이 외부 의존성이라면 timeout 단축, fallback, circuit breaker로 확산을 막는다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span>DB connection pool이 모두 사용 중인 상황에서 어떤 로그와 지표를 확인할지 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>특정 API에서 500 error가 증가했다. 배포, DB, 외부 연동, 트래픽 관점에서 확인 순서를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>500 error 증가는 서버 내부 처리 중 예외가 늘었다는 뜻이므로 최근 변경과 의존성 장애를 함께 확인해야 한다.</p>
+<h4>답변</h4>
+<p>먼저 에러 발생 시각, API path, error code, exception type, trace id를 모아 공통 패턴을 찾는다. 최근 배포가 있으면 변경된 코드와 설정, feature flag를 확인한다. DB 관점에서는 connection pool 고갈, deadlock, slow query, 제약 조건 오류를 보고, 외부 연동 관점에서는 timeout, 5xx, 인증 실패를 본다. 트래픽 급증이 원인이면 rate limit, queue 적체, thread pool 포화 여부를 확인한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>운영 서버 CPU가 95% 이상으로 유지된다. Java 애플리케이션 기준 분석 절차를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>CPU 고사용은 계산량 증가, 무한 루프, 과도한 GC, lock 경합, 트래픽 증가 등으로 발생할 수 있다. Java에서는 OS 지표와 JVM 지표를 함께 봐야 한다.</p>
+<h4>답변</h4>
+<p>먼저 <code>top</code>이나 <code>pidstat</code>으로 CPU를 많이 쓰는 Java 프로세스를 확인하고, 스레드별 CPU 사용량을 본다. 해당 thread id를 hex로 바꿔 thread dump의 스택과 매칭한다. 동시에 GC log와 heap 사용량을 확인해 GC가 CPU를 쓰는지 판단한다. 최근 배포, 요청량 증가, 특정 API 집중 여부를 비교하고 문제가 되는 코드 경로를 프로파일링한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>메모리 사용량이 계속 증가하다 OOM이 발생했다. 확인 절차를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>OOM은 JVM이 필요한 메모리를 확보하지 못했을 때 발생한다. heap 부족, metaspace 부족, direct memory 부족 등 원인 영역을 먼저 구분해야 한다.</p>
+<h4>답변</h4>
+<p>먼저 OOM 메시지의 종류와 발생 시각을 확인하고 GC log에서 full GC 이후에도 heap이 줄지 않는지 본다. heap dump를 확보해 retained size가 큰 객체와 GC root를 추적한다. ThreadLocal, static collection, cache TTL 누락, 대량 조회 결과 보관, listener 미해제 같은 누수 패턴을 점검한다. 임시로 heap을 늘리는 것은 완화책일 뿐이고, 참조가 해제되지 않는 원인을 수정해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span>배치 작업이 중복 실행되어 데이터가 두 번 적재됐다. 재발 방지 설계를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring Batch는 대량 데이터를 안정적으로 처리하기 위한 배치 프레임워크다. Job은 전체 배치 작업, Step은 작업 단계, Reader/Processor/Writer는 읽기, 가공, 쓰기 역할을 나눈다.</p>
+<h4>답변</h4>
+<p>Tasklet은 한 Step 안에서 임의의 작업을 직접 수행하는 방식이라 단순 작업이나 파일 정리, 호출 작업에 적합하다. Chunk는 일정 건수 단위로 읽고 처리하고 쓰며 트랜잭션을 끊어 대량 데이터 처리에 적합하다. service_id 단위로 처리하면 일부 실패를 격리하고 재처리 범위를 줄일 수 있지만, 멱등키와 실행 이력 관리가 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>외부 시스템 호출이 느려져 전체 API가 느려졌다. timeout, retry, circuit breaker 관점에서 개선안을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>외부 시스템 지연은 호출 스레드와 connection을 오래 점유해 전체 API 지연으로 번질 수 있다. timeout, retry, circuit breaker로 장애 전파를 제한해야 한다.</p>
+<h4>답변</h4>
+<p>connect timeout과 read timeout을 명확히 설정해 무한 대기를 막는다. retry는 조회처럼 멱등한 요청에만 제한된 횟수와 backoff를 적용하고, 생성/변경 요청은 idempotency key 없이는 자동 재시도를 피한다. 실패율이나 timeout이 임계치를 넘으면 circuit breaker를 열어 빠르게 실패시키고 fallback이나 대체 응답이 가능한지 업무 기준으로 정한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>대량 데이터 조회 API가 운영 DB에 부하를 준다. 개선 방안을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>장애 발생 시 원인 추적을 위해 로그에 반드시 남겨야 할 값을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>원인 추적 로그는 요청을 식별하고, 어느 구간에서 실패했는지, 어떤 입력과 상태에서 실패했는지를 알려줘야 한다.</p>
+<h4>답변</h4>
+<p>반드시 남길 값은 timestamp, trace id/request id, service id 또는 사용자 식별자, API path, method, status, latency, error code, exception class/message, 외부 호출 대상과 응답 코드, DB 쿼리 식별 정보, 서버 인스턴스, 배포 버전이다. 비밀번호, 토큰, 주민번호 같은 민감 정보는 저장하지 않거나 마스킹한다. 같은 trace id로 여러 서비스 로그를 연결할 수 있어야 장애 범위를 빠르게 좁힐 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>신규 기능 배포 후 장애가 발생했다. rollback과 hotfix 중 어떤 기준으로 선택할지 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>통신 Core 시스템의 subscriber 데이터 조회 API를 설계한다고 가정하고, 데이터 정합성과 성능을 모두 고려한 설계를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>subscriber 데이터 조회 API는 가입자 상태를 정확하게 보여주면서도 높은 조회 부하를 견뎌야 한다. 정합성과 성능의 기준을 먼저 나눠 설계해야 한다.</p>
+<h4>답변</h4>
+<p>강한 정합성이 필요한 핵심 상태는 master DB나 권위 있는 시스템에서 조회하고, 자주 조회되는 부가 정보는 read replica나 cache를 사용할 수 있다. cache를 쓰면 TTL, invalidation, stale data 허용 범위를 명확히 둔다. 조회 조건에는 적절한 index를 두고, 대량 조회는 paging과 limit을 강제한다. 장애 시에는 fallback 데이터 사용 가능 여부와 응답 코드 기준을 정하고, trace id로 외부 연동과 DB 조회 시간을 분리해 관측한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>Spring Boot 기반 Web Application을 Tomcat으로 운영할 때 thread pool, DB pool, timeout 설정을 어떻게 함께 볼지 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span>MSA 구조에서 한 서비스 장애가 전체 장애로 번지지 않게 하는 설계를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>아키텍처 문제는 정답 하나보다 트레이드오프를 설명하는 능력을 본다. MSA는 서비스별 독립 배포와 확장이 장점이지만 네트워크 장애, 분산 트랜잭션, 관측성 복잡도가 커진다.</p>
+<h4>답변</h4>
+<p>Saga는 각 서비스의 로컬 트랜잭션과 보상 트랜잭션으로 일관성을 맞추는 방식이고, 2PC는 조정자가 prepare/commit 단계를 통해 강한 일관성을 맞추지만 장애와 지연에 취약하다. Kafka는 대용량 이벤트 스트림과 재처리에 강하고, RabbitMQ는 라우팅과 작업 큐 패턴에 강하다. Cache Aside는 애플리케이션이 캐시 조회 후 miss일 때 DB를 조회해 캐시에 채우는 방식이며, cache stampede와 stale data를 주의해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span>PostgreSQL 또는 MariaDB에서 특정 쿼리가 느릴 때 실행 계획을 보고 어떤 항목을 확인할지 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>Java 서버에서 동시 요청이 증가할 때 병목이 thread인지 DB인지 network인지 구분하는 방법을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>동시 요청 증가 시 병목 구분은 대기 시간이 어디에서 쌓이는지 보는 문제다. thread, DB, network 지표를 같은 시간축에서 비교해야 한다.</p>
+<h4>답변</h4>
+<p>thread 병목이면 Tomcat active thread가 max에 가깝고 thread dump에서 대기 스레드가 많다. DB 병목이면 connection pool pending, slow query, lock wait, DB CPU/IO가 증가한다. network나 외부 API 병목이면 외부 호출 latency와 timeout, connection error가 늘어난다. 애플리케이션 로그에 구간별 소요 시간을 남겨 controller, service, DB, external call 중 어느 구간이 느린지 분리해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">16.</span><span>Spring Batch에서 Tasklet과 Chunk 방식의 차이를 설명하고, 각각 적합한 상황을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring Batch는 대량 데이터를 안정적으로 처리하기 위한 배치 프레임워크다. Job은 전체 배치 작업, Step은 작업 단계, Reader/Processor/Writer는 읽기, 가공, 쓰기 역할을 나눈다.</p>
+<h4>답변</h4>
+<p>Tasklet은 한 Step 안에서 임의의 작업을 직접 수행하는 방식이라 단순 작업이나 파일 정리, 호출 작업에 적합하다. Chunk는 일정 건수 단위로 읽고 처리하고 쓰며 트랜잭션을 끊어 대량 데이터 처리에 적합하다. service_id 단위로 처리하면 일부 실패를 격리하고 재처리 범위를 줄일 수 있지만, 멱등키와 실행 이력 관리가 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">17.</span><span>Spring Batch에서 <code>REQUIRES_NEW</code>를 사용하는 이유와 주의할 점을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>트랜잭션 전파 속성은 이미 트랜잭션이 있는 상황에서 새 메서드가 어떤 트랜잭션에 참여할지 정하는 규칙이다. REQUIRED는 기존 트랜잭션이 있으면 참여하고 없으면 새로 만들며, REQUIRES_NEW는 기존 트랜잭션을 잠시 중단하고 항상 새 트랜잭션을 시작한다.</p>
+<h4>답변</h4>
+<p>REQUIRES_NEW는 배치에서 service_id별 처리 결과를 독립 커밋하거나, 로그/이력 저장을 본 작업 롤백과 분리할 때 유용하다. 다만 물리 커넥션을 추가로 사용할 수 있어 connection pool 고갈 위험이 있고, 내부 호출이면 Spring 프록시를 거치지 않아 적용되지 않을 수 있다. 그래서 실패 격리 단위, 커넥션 수, 호출 구조, 롤백 정책을 함께 설명해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">18.</span><span>MyBatis의 동작 원리와 JPA와의 차이를 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>MyBatis는 SQL을 개발자가 직접 작성하고 mapper를 통해 Java 객체와 결과를 매핑하는 persistence framework다. SQL 제어력이 높아 복잡한 조회나 튜닝이 필요한 시스템에서 장점이 있다.</p>
+<h4>답변</h4>
+<p>JPA는 객체와 테이블 매핑을 중심으로 변경 감지, 영속성 컨텍스트, JPQL 등을 제공한다. MyBatis는 SQL이 명시적이라 실행 쿼리를 예측하기 쉽지만 반복 SQL과 매핑 관리가 늘어날 수 있다. 동적 SQL은 조건 누락, 인덱스 미사용, SQL Injection 가능성을 주의해야 하며 실행 계획과 실제 rows를 확인해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">19.</span><span>FeignClient를 사용할 때 timeout, retry, fallback을 어떻게 설계할지 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>FeignClient는 외부 HTTP API를 선언형 인터페이스로 호출하게 해주는 도구다. 외부 연동은 지연과 실패가 정상적으로 발생할 수 있으므로 timeout, retry, fallback을 명시해야 한다.</p>
+<h4>답변</h4>
+<p>connect timeout은 연결 수립 시간, read timeout은 응답을 기다리는 시간으로 나누어 설정한다. retry는 멱등 조회 요청에만 제한적으로 적용하고 backoff를 둔다. fallback은 오래된 데이터나 기본값 반환이 업무적으로 허용될 때만 사용한다. 실패가 누적되면 circuit breaker로 호출을 차단해 내부 thread와 connection 고갈을 막는다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">20.</span><span>S3 업로드 성공 후 DB 저장이 실패하는 상황에서 정합성을 맞추는 방법을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>S3는 객체 스토리지로 파일과 메타데이터를 key 기반으로 저장한다. DB처럼 트랜잭션과 복잡한 질의를 제공하는 저장소가 아니므로 정합성 전략을 별도로 설계해야 한다.</p>
+<h4>답변</h4>
+<p>S3 업로드와 DB 저장은 하나의 로컬 트랜잭션으로 묶을 수 없기 때문에 상태값, 재시도 큐, 보상 삭제, 멱등 object key가 필요하다. Parquet은 columnar 형식이라 필요한 컬럼만 읽기 좋고 압축 효율이 높아 대용량 분석에 유리하다. CSV/JSON보다 사람이 바로 읽기는 어렵지만 스키마와 컬럼 기반 처리 측면에서 장점이 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">21.</span><span>Parquet 파일 형식의 특징과 CSV/JSON 대비 장점을 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>S3는 객체 스토리지로 파일과 메타데이터를 key 기반으로 저장한다. DB처럼 트랜잭션과 복잡한 질의를 제공하는 저장소가 아니므로 정합성 전략을 별도로 설계해야 한다.</p>
+<h4>답변</h4>
+<p>S3 업로드와 DB 저장은 하나의 로컬 트랜잭션으로 묶을 수 없기 때문에 상태값, 재시도 큐, 보상 삭제, 멱등 object key가 필요하다. Parquet은 columnar 형식이라 필요한 컬럼만 읽기 좋고 압축 효율이 높아 대용량 분석에 유리하다. CSV/JSON보다 사람이 바로 읽기는 어렵지만 스키마와 컬럼 기반 처리 측면에서 장점이 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">22.</span><span>운영 DB와 통계 DB를 분리한 경험을 성능, 장애 격리, 트랜잭션 관점에서 설명하시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">23.</span><span>Schema Validation 실패나 reset 로직 오류가 발생했을 때 원인 분석과 재발 방지 방법을 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Schema Validation 실패는 입력 데이터가 기대한 필드, 타입, 필수값, 형식 조건을 만족하지 못할 때 발생한다. reset 로직 오류는 실패 후 상태 복구 기준이 잘못되었을 때 재처리 문제로 이어진다.</p>
+<h4>답변</h4>
+<p>먼저 실패 데이터 샘플, schema version, 누락 필드, 타입 오류, null 허용 여부, 최근 배포 변경을 확인한다. reset 로직은 어떤 상태를 어느 시점으로 되돌리는지, 이미 처리된 데이터와 미처리 데이터를 어떻게 구분하는지 검증한다. 재발 방지는 대표 실패 케이스를 테스트로 추가하고, 검증 실패 데이터를 격리 저장하며, 재처리 idempotency와 S3/DB 정합성 검사를 둔다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">24.</span><span>대량 배치 처리에서 service_id 단위로 실패를 격리하는 설계를 쓰시오.</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring Batch는 대량 데이터를 안정적으로 처리하기 위한 배치 프레임워크다. Job은 전체 배치 작업, Step은 작업 단계, Reader/Processor/Writer는 읽기, 가공, 쓰기 역할을 나눈다.</p>
+<h4>답변</h4>
+<p>Tasklet은 한 Step 안에서 임의의 작업을 직접 수행하는 방식이라 단순 작업이나 파일 정리, 호출 작업에 적합하다. Chunk는 일정 건수 단위로 읽고 처리하고 쓰며 트랜잭션을 끊어 대량 데이터 처리에 적합하다. service_id 단위로 처리하면 일부 실패를 격리하고 재처리 범위를 줄일 수 있지만, 멱등키와 실행 이력 관리가 필요하다.</p>
+</div>
+</details>
+<h2 id="16-객관식으로-나올-수-있는-빠른-확인-문제">16. 객관식으로 나올 수 있는 빠른 확인 문제</h2>
+<details class="qa-card">
+<summary><span class="qa-number">1.</span><span>Java에서 모든 클래스의 최상위 클래스는 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Java의 모든 클래스는 명시적으로 다른 클래스를 상속하지 않으면 기본적으로 <code>java.lang.Object</code>를 상속한다.</p>
+<h4>답변</h4>
+<p><code>Object</code>는 <code>equals</code>, <code>hashCode</code>, <code>toString</code>, <code>getClass</code>, <code>wait</code>, <code>notify</code>, <code>notifyAll</code> 같은 공통 메서드를 제공한다. 그래서 모든 참조 타입은 Object 타입으로 다룰 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">2.</span><span><code>HashMap</code>의 평균 조회 시간 복잡도는 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HashMap</code>은 key의 hashCode로 버킷 위치를 계산하고, 같은 버킷 안에서 equals로 최종 key를 찾는 자료구조다. 평균적으로 조회, 삽입, 삭제가 O(1)에 가깝지만 해시 충돌이 많으면 성능이 나빠진다.</p>
+<h4>답변</h4>
+<p>Java 8 이후에는 한 버킷에 충돌 노드가 많아지면 linked list가 tree 구조로 바뀌어 최악 성능을 완화한다. key는 hashCode와 equals가 안정적이어야 하며, key로 쓰는 객체의 필드가 변경되면 조회가 깨질 수 있다. 멀티스레드 환경에서는 일반 HashMap을 공유 쓰기하면 안전하지 않으므로 ConcurrentHashMap 같은 구조를 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">3.</span><span>TCP는 연결형 프로토콜인가 비연결형 프로토콜인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>TCP는 연결형 프로토콜이다. 데이터를 보내기 전에 3-way handshake로 연결을 수립한다.</p>
+<h4>답변</h4>
+<p>TCP는 연결을 기반으로 순서 보장, 재전송, 흐름제어, 혼잡제어를 제공한다. 반대로 UDP는 비연결형 프로토콜이라 연결 수립 없이 datagram을 보내며, 신뢰성은 애플리케이션이 별도로 보완해야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">4.</span><span>HTTP 201은 어떤 의미인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>HTTP 201 Created</code>는 요청이 성공했고 그 결과로 새로운 리소스가 생성되었음을 의미하는 상태 코드다.</p>
+<h4>답변</h4>
+<p>주로 POST 요청으로 리소스를 생성했을 때 사용한다. 생성된 리소스의 위치를 <code>Location</code> header로 함께 내려줄 수 있다. 단순 조회 성공은 200, 비동기 처리 접수는 202와 구분한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">5.</span><span>DB transaction의 원자성을 의미하는 ACID 항목은 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>DB 문제는 정합성, 성능, 동시성의 균형을 묻는 경우가 많다. 인덱스는 조회 성능을 높이지만 쓰기 비용과 저장 공간을 증가시키고, 트랜잭션은 ACID를 통해 데이터 일관성을 보장한다.</p>
+<h4>답변</h4>
+<p>실행 계획에서는 index 사용 여부, rows 추정치, join 방식, filesort/temp table 여부를 확인한다. isolation level은 dirty read, non-repeatable read, phantom read 같은 현상을 어디까지 막을지 결정한다. 운영 DB와 통계 DB를 분리하는 이유는 대량 조회와 배치가 실시간 트랜잭션 처리에 주는 부하를 줄이고 장애 영향 범위를 분리하기 위해서다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">6.</span><span><code>SELECT ... FOR UPDATE</code>는 어떤 종류의 읽기인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>SELECT ... FOR UPDATE</code>는 조회한 row에 배타적 lock을 거는 locking read다. 단순 조회가 아니라 이후 갱신을 전제로 다른 트랜잭션의 동시 변경을 막는다.</p>
+<h4>답변</h4>
+<p>재고 차감, 잔액 변경처럼 읽은 값을 기준으로 곧바로 수정해야 하는 경우에 사용한다. 트랜잭션이 끝날 때까지 lock이 유지될 수 있으므로 범위를 좁게 잡고 트랜잭션을 짧게 유지해야 deadlock과 대기 시간을 줄일 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">7.</span><span>Spring의 DI는 어떤 설계 원칙과 관련이 깊은가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Spring의 핵심은 객체 생성과 의존관계 관리를 개발자가 직접 하지 않고 컨테이너가 맡는다는 점이다. IoC는 제어의 역전이고 DI는 필요한 의존성을 외부에서 주입받는 방식이다.</p>
+<h4>답변</h4>
+<p><code>@Transactional</code>은 보통 프록시 기반 AOP로 동작하므로 같은 클래스 내부 호출에서는 프록시를 거치지 않아 적용되지 않을 수 있다. Filter는 Servlet 앞단, Interceptor는 Spring MVC 요청 흐름 중간, AOP는 메서드 실행 전후 공통 관심사를 다루는 데 적합하다. 계층 분리는 책임을 나눠 테스트와 변경을 쉽게 하고, DTO/Entity 분리는 API 계약과 영속성 모델이 서로 영향을 덜 주게 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">8.</span><span>REST에서 GET 요청은 body를 통해 상태를 변경하는 데 사용해야 하는가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">9.</span><span>Linux에서 현재 열려 있는 TCP listen port를 확인하는 명령어는 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Linux 운영 문제는 장애 상황에서 서버 상태를 빠르게 확인할 수 있는지를 본다. CPU, memory, disk, network, process, port, file descriptor를 순서 있게 확인하는 습관이 중요하다.</p>
+<h4>답변</h4>
+<p>포트 점유는 <code>ss -lntp</code>나 <code>lsof -i</code>로 확인하고, CPU 문제는 <code>top</code>, <code>ps</code>, Java라면 thread dump와 함께 본다. SIGTERM은 애플리케이션이 정리하고 종료할 기회를 주지만 SIGKILL은 즉시 종료라 정리 로직이 실행되지 않는다. graceful shutdown은 처리 중 요청, 배치, 커넥션을 안전하게 마무리하기 위해 필요하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">10.</span><span>Gradle에서 dependency graph를 확인하는 명령은 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">11.</span><span>Tomcat에서 요청 처리 thread가 부족하면 어떤 증상이 나타날 수 있는가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>Tomcat과 배포 문제는 애플리케이션이 실제 운영 환경에서 요청을 어떻게 받고 배포되는지 묻는다. Tomcat은 Servlet container로 HTTP 요청을 Servlet 기반 애플리케이션에 전달하고 thread pool로 요청을 처리한다.</p>
+<h4>답변</h4>
+<p>Tomcat thread가 부족하면 요청 대기와 timeout이 늘어나고, DB pool이 작으면 thread가 DB 커넥션을 기다리며 묶일 수 있다. 그래서 max threads, DB connection pool, 외부 호출 timeout을 함께 조정해야 한다. Gradle은 빌드 자동화 도구이며 multi-module은 공통 모듈과 서비스 모듈을 분리해 의존성과 빌드 범위를 관리하는 데 유리하다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">12.</span><span>JWT는 서버 세션을 완전히 대체할 수 있는가? 그렇지 않다면 이유는 무엇인가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>REST와 Web Backend 문제는 HTTP를 계약으로 이해하는지가 중요하다. method, status code, header/body, 인증 방식, timeout, retry 정책이 모두 클라이언트와 서버 사이의 명확한 약속이다.</p>
+<h4>답변</h4>
+<p>GET은 조회에 사용하고 안전하고 멱등적이어야 한다. PUT은 전체 교체, PATCH는 부분 수정에 가깝고, POST는 생성이나 명령성 처리에 쓰인다. JWT는 서버 세션 저장 부담을 줄일 수 있지만 탈취, 만료, 갱신, 폐기 전략을 반드시 고려해야 하며, retry는 멱등하지 않은 API에 무조건 적용하면 중복 처리 장애를 만들 수 있다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">13.</span><span><code>volatile</code>은 atomic 연산을 보장하는가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>volatile</code>은 가시성을 보장하지만 복합 연산의 원자성은 보장하지 않는다.</p>
+<h4>답변</h4>
+<p>예를 들어 <code>count++</code>는 값을 읽고, 1을 더하고, 다시 쓰는 여러 단계로 구성된다. volatile 변수라도 여러 스레드가 동시에 수행하면 증가분이 유실될 수 있다. 원자적 증가가 필요하면 <code>AtomicInteger</code>, synchronized, lock을 사용한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">14.</span><span><code>READ COMMITTED</code>에서 non-repeatable read가 발생할 수 있는가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p><code>READ COMMITTED</code>는 커밋된 데이터만 읽도록 보장하는 격리 수준이다. Dirty read는 막지만 같은 트랜잭션 안에서 같은 row를 다시 읽었을 때 값이 달라지는 non-repeatable read는 발생할 수 있다.</p>
+<h4>답변</h4>
+<p>예를 들어 트랜잭션 A가 어떤 회원의 잔액을 읽은 뒤, 트랜잭션 B가 그 잔액을 수정하고 커밋하면 A가 다시 읽을 때 변경된 값을 볼 수 있다. 같은 트랜잭션 안에서 반복 읽기 일관성이 필요하면 <code>REPEATABLE READ</code> 이상을 검토한다. 다만 격리 수준을 높이면 lock 경합이나 MVCC 비용이 커질 수 있어 업무 정합성 요구와 성능을 함께 봐야 한다.</p>
+</div>
+</details>
+<details class="qa-card">
+<summary><span class="qa-number">15.</span><span>Kubernetes readiness probe와 liveness probe는 각각 어떤 목적을 가지는가?</span></summary>
+<div class="qa-body">
+<h4>개념</h4>
+<p>통신 도메인 기초는 깊은 프로토콜 암기보다 회사가 다루는 서버의 성격을 이해하는 수준이 우선이다. Core Network는 가입자 인증, 세션 관리, 트래픽 제어, 과금 연동 등 이동통신망의 핵심 제어 기능을 담당한다.</p>
+<h4>답변</h4>
+<p>IMS는 VoLTE 같은 IP 기반 음성/멀티미디어 서비스를 위한 구조이고, HLR/HSS/UDM/UDR은 가입자 정보와 인증 관련 기능을 맡는다. NRF는 5G Core에서 네트워크 기능들이 서로를 찾게 하는 service registry 역할이고, UPF는 사용자 트래픽 전달 경로를 담당한다. VNF는 VM 기반 네트워크 기능, CNF는 컨테이너/Kubernetes 기반 네트워크 기능이며, MANO는 이런 네트워크 기능의 배포와 생명주기 관리를 다룬다.</p>
+</div>
+</details>
+<h2 id="우선순위-높은-복습-키워드">우선순위 높은 복습 키워드</h2>
+<ul>
+<li>Java: equals/hashCode, Collection, ConcurrentHashMap, synchronized, volatile, ExecutorService, JVM/GC</li>
+<li>Spring: DI, Bean, AOP, Transaction, REST Controller, validation, exception handling</li>
+<li>DB: index, transaction isolation, lock, execution plan, connection pool, MariaDB/PostgreSQL</li>
+<li>운영: Linux process, port, thread dump, heap dump, log, graceful shutdown</li>
+<li>Network: TCP, HTTP, timeout, keep-alive, load balancer, DNS, TLS</li>
+<li>Architecture: MSA, RESTful, circuit breaker, retry, queue, cache, HA</li>
+<li>Telecom: IMS, 5G Core, HSS/HLR, UDM/UDR, NRF, UPF, VNF/CNF, O&amp;M</li>
+<li>Resume Based: Spring Batch, Chunk/Tasklet, REQUIRES_NEW, MyBatis, FeignClient, Parquet, S3, Aurora MySQL, 운영DB/통계DB 분리, 실패 격리</li>
+</ul>
+      </section>
+      <footer class="page-foot"><a href="0-home.html">Home으로 이동</a></footer>
+    </article>
+  </main>
+</body>
+</html>
