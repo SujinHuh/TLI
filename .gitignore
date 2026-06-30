@@ -4,4 +4,5 @@ interviews/company/*
 !interviews/company/텔코웨어/
 interviews/company/텔코웨어/*
 !interviews/company/텔코웨어/*.md
+!interviews/company/텔코웨어/telcoware_backend_report.pdf
 temp/
