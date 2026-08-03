@@ -20,6 +20,8 @@ TLI/
     database/
     spring/
     infra/
+    operating-system/
+    system-design-interview/
     algorithm/
     git/
 ```
