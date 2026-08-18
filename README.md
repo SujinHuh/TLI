@@ -13,6 +13,7 @@ TLI/
     study-log-format.md
     study-log-workflow.md
     study-log-verification.md
+    study-pr-format.md
     study-html-format.md
   daily/
     2024/
@@ -38,6 +39,7 @@ AI 에이전트는 저장소 루트의 `AGENTS.md`를 진입점으로 사용한�
 - [학습 기록 작성 흐름](docs/study-log-workflow.md)
 - [학습 기록 검수 기준](docs/study-log-verification.md)
 - [학습 기록 포맷](docs/study-log-format.md)
+- [학습 기록 PR 형식](docs/study-pr-format.md)
 - [공부 HTML 형식](docs/study-html-format.md)
 
 ## Daily Logs
